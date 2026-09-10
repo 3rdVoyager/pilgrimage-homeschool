@@ -3,14 +3,18 @@ const footer = document.querySelector('footer');
 
 header.innerHTML = `
     <nav>
+        <a href="index.html">
+            <img src="/assets/favicon/web-app-manifest-512x512.png" class="brand-logo"alt="Pilgrimage Homeschool Logo" />
+            <span>Pilgrimage Homeschool</span>
+        </a>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="/about/index.html">About</a></li>
-            <li><a href="/contact/index.html">Contact</a></li>
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="/about/index.html" class="nav-link">About</a></li>
+            <li><a href="/contact/index.html" class="nav-link">Contact</a></li>
         </ul>
     </nav>
 `;
 
 footer.innerHTML = `
-    <p>Copyright 2026. All rights reserved.</p>
+    <p>&copy; Pilgrimage Homeschool 2026. All rights reserved.</p>
 `;
