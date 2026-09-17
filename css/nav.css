@@ -43,7 +43,7 @@
 .site-header>nav>a>span {
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--color-gold);
+    color: var(--color-text-light);
 }
 
 .site-header .brand-logo {
