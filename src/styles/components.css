@@ -10,6 +10,7 @@
 
 .hero-lede {
     font-size: clamp(1.2rem, 2vw, 1.5rem);
+    font-style: italic;
 }
 
 .button-group {
