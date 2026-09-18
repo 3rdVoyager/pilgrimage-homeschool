@@ -1,3 +1,13 @@
+---
+const navItems = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about/" },
+  { label: "Contact", href: "/contact/" },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
 <header class="site-header">
   <nav>
     <a href="/">
@@ -5,14 +15,23 @@
         src="/assets/favicon/favicon.svg"
         class="brand-logo"
         alt="Pilgrimage Homeschool logo"
-        />
+      />
       <span>Pilgrimage Homeschool</span>
     </a>
 
     <ul>
-      <li><a href="/" class="nav-link">Home</a></li>
-      <li><a href="/about/" class="nav-link">About</a></li>
-      <li><a href="/contact/" class="nav-link">Contact</a></li>
+      {
+        navItems.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              class={currentPath === item.href ? "nav-link active" : "nav-link"}
+            >
+              {item.label}
+            </a>
+          </li>
+        ))
+      }
     </ul>
   </nav>
 </header>

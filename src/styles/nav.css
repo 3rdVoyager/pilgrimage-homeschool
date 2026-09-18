@@ -35,6 +35,11 @@
     color: var(--color-gold-light);
 }
 
+.site-header .nav-link.active {
+    background-color: var(--color-burgundy);
+    color: var(--color-gold-light);
+}
+
 .site-header>nav>a {
     display: flex;
     align-items: center;

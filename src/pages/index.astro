@@ -1,12 +1,33 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Button from "../components/Button.astro";
+import ContentSection from "../components/ContentSection.astro";
 ---
 
 <BaseLayout title="Pilgrimage Homeschool Science Olympiad">
-  <h1>Pilgrimage Homeschool Science Olympiad</h1>
+  <section class="page-hero">
+    <h1>Pilgrimage Homeschool Science Olympiad</h1>
 
-  <p>
-    Pilgrimage Homeschool Science Olympiad is the only non-school-affiliated
-    team of over 70 schools competing in Maryland.
-  </p>
+    <p>
+      Pilgrimage Homeschool Science Olympiad is the only non-school-affiliated
+      team of over 70 schools competing in Maryland.
+    </p>
+
+    <Button href="/about/" label="Learn About Us" />
+  </section>
+
+  <ContentSection title="About Us">
+    <p>
+      Pilgrimage has been highly competitive since 2010, coming first in the
+      state of Maryland four times to represent Maryland at the national
+      tournament.
+    </p>
+  </ContentSection>
+
+  <ContentSection title="Science Olympiad">
+    <p>
+      Students compete in study, build, and laboratory events covering many
+      scientific areas.
+    </p>
+  </ContentSection>
 </BaseLayout>
