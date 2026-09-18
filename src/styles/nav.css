@@ -3,6 +3,9 @@
     padding: 1rem;
     text-align: center;
     border-bottom: 3px solid var(--color-gold);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .site-header nav {
@@ -63,4 +66,16 @@
     text-align: center;
     color: var(--color-text-light);
     border-top: 3px solid var(--color-gold);
+}
+
+@media (max-width: 650px) {
+    .site-header nav {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .site-header nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }
