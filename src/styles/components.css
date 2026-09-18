@@ -55,8 +55,120 @@
     font-size: 1rem;
 }
 
+.staff-section {
+    gap: 1rem;
+}
+
+.staff-grid {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin-top: 0.75rem;
+}
+
+.staff-card {
+    background-color: var(--color-card-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    text-align: center;
+}
+
+.staff-photo-placeholder {
+    align-items: center;
+    background-color: var(--color-slate-light);
+    border: 3px solid var(--color-gold);
+    border-radius: 50%;
+    color: var(--color-burgundy);
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: 700;
+    height: 7rem;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    width: 7rem;
+}
+
+.staff-photo {
+    border: 3px solid var(--color-gold);
+    border-radius: 50%;
+    display: block;
+    height: 7rem;
+    margin: 0 auto 1rem;
+    object-fit: cover;
+    width: 7rem;
+}
+
+.staff-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+}
+
+.staff-card p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.staff-role {
+    font-weight: 600;
+}
+
+.staff-years,
+.staff-history {
+    color: var(--color-muted);
+    font-style: italic;
+}
+
+.directory-list {
+    display: grid;
+    gap: 0.85rem;
+    margin-top: 0.75rem;
+}
+
+.directory-row {
+    border-bottom: 1px solid var(--color-border);
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    padding: 0.35rem 0;
+}
+
+.directory-row span {
+    color: var(--color-muted);
+}
+
+.board-grid {
+    display: grid;
+    gap: 0.85rem 2rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 0.75rem;
+}
+
+.board-grid strong {
+    border: 1px solid var(--color-border);
+    border-radius: 0.75rem;
+    padding: 0.5rem 1rem;
+}
+
 @media (max-width: 700px) {
     .event-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .staff-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .directory-row {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.15rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .staff-grid,
+    .board-grid {
         grid-template-columns: 1fr;
     }
 }

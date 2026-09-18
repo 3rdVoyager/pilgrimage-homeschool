@@ -1,0 +1,129 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const coaches = [
+  {
+    name: "Mrs Cheryl Booth",
+    role: "Head Coach, Divisions A, B & C",
+    history: "Former Assistant Coach for Division B, 2020–2021",
+    years: "2021–present",
+    image: "/assets/images/Cheryl.jpg",
+  },
+  {
+    name: "Mr Peter Chen",
+    role: "Assistant Coach",
+    history: "Junior Assistant Coach, 2022–2025; PH Team Member, 2018–2022",
+    years: "2025–present",
+    image: "/assets/images/Peter.jpg",
+  },
+  {
+    name: "Mrs Maria Kinsinger",
+    role: "Former Assistant Coach",
+    history: "Former Division B Head Coach, 2017–2021",
+    years: "2023–2026",
+    image: "/assets/images/Maria.jpg",
+  },
+  {
+    name: "Mr West Coile",
+    role: "Founder & Former Head Coach",
+    years: "2010–2019",
+    image: "/assets/images/West.jpg",
+  },
+];
+
+const officers = [
+  { role: "Team Manager", name: "Mrs Olivia Hsu-Cheng" },
+  { role: "Team Treasurer", name: "Mrs Theresa Chen" },
+  { role: "Assistant Team Manager", name: "Mrs Theresa Chen" },
+];
+
+const studentAssistants = [
+  { role: "Junior Assistant Coach, Division B", name: "Joshie Cheng" },
+  { role: "Junior Assistant Coach, Division C", name: "John Chu" },
+  { role: "Team Mentor, Division B", name: "John Chu" },
+  { role: "Technology Coordinator", name: "Joshie Cheng" },
+];
+
+const boardMembers = [
+  "Mrs Cheryl Booth",
+  "Mrs Maria Kinsinger",
+  "Mrs Theresa Chen",
+  "Mrs Olivia Hsu-Cheng",
+  "Mrs Betty Simon-Ogan",
+];
+---
+
+<BaseLayout title="Our Staff | Pilgrimage Homeschool">
+  <section class="page-hero">
+    <h1>Our Staff</h1>
+    <p class="hero-lede">
+      Pilgrimage is led by coaches, volunteers, and student leaders who share
+      a commitment to science, teamwork, and learning.
+    </p>
+  </section>
+
+  <section class="page-section staff-section">
+    <h2>Coaching Staff</h2>
+    <div class="staff-grid">
+      {
+        coaches.map((coach) => (
+          <article class="staff-card">
+            {
+              coach.image ? (
+                <img class="staff-photo" src={coach.image} alt={`${coach.name} portrait`} />
+              ) : (
+                <div class="staff-photo-placeholder" aria-hidden="true">
+                  {coach.name
+                    .replace("Mrs ", "")
+                    .replace("Mr ", "")
+                    .split(" ")
+                    .map((name) => name[0])
+                    .join("")}
+                </div>
+              )
+            }
+            <h3>{coach.name}</h3>
+            <p class="staff-role">{coach.role}</p>
+            <p class="staff-years">{coach.years}</p>
+            {coach.history && <p class="staff-history">{coach.history}</p>}
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="page-section staff-section">
+    <h2>Officers</h2>
+    <div class="directory-list">
+      {
+        officers.map((person) => (
+          <div class="directory-row">
+            <span>{person.role}</span>
+            <strong>{person.name}</strong>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="page-section staff-section">
+    <h2>Student Assistants</h2>
+    <div class="directory-list">
+      {
+        studentAssistants.map((person) => (
+          <div class="directory-row">
+            <span>{person.role}</span>
+            <strong>{person.name}</strong>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="page-section staff-section">
+    <h2>Board of Directors</h2>
+    <div class="board-grid">
+      {boardMembers.map((member) => <strong>{member}</strong>)}
+    </div>
+  </section>
+</BaseLayout>
