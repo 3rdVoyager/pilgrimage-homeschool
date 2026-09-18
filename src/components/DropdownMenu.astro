@@ -1,0 +1,25 @@
+---
+const { label, items, currentPath } = Astro.props;
+const menuItems: { label: string; href: string }[] = items;
+const isActive = menuItems.some((item) => currentPath === item.href);
+---
+
+<li class="nav-dropdown">
+  <details open={isActive}>
+    <summary class:list={["nav-link", isActive && "active"]}>{label}</summary>
+    <ul class="dropdown-menu">
+      {
+        menuItems.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              class:list={["nav-link", currentPath === item.href && "active"]}
+            >
+              {item.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </details>
+</li>

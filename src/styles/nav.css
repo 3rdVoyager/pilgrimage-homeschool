@@ -15,7 +15,7 @@
     gap: 1rem;
 }
 
-.site-header nav ul {
+.site-header>nav>ul {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -23,7 +23,12 @@
     list-style: none;
 }
 
+.site-header>nav>ul>li {
+    position: relative;
+}
+
 .site-header .nav-link {
+    border: 0;
     background-color: var(--color-slate);
     color: var(--color-text-light);
     text-decoration: none;
@@ -31,6 +36,11 @@
     border-radius: 6px;
     font-weight: 600;
     transition: all 0.1s ease;
+    align-items: center;
+    box-sizing: border-box;
+    display: inline-flex;
+    line-height: 1.2;
+    min-height: 2.25rem;
 }
 
 .site-header .nav-link:hover {
@@ -43,11 +53,51 @@
     color: var(--color-gold-light);
 }
 
+.nav-dropdown summary {
+    cursor: pointer;
+    display: block;
+    font: inherit;
+    line-height: inherit;
+    list-style: none;
+}
+
+.nav-dropdown summary::-webkit-details-marker {
+    display: none;
+}
+
+.nav-dropdown summary::after {
+    content: "▾";
+    font-size: 0.75em;
+    margin-left: 0.4rem;
+}
+
+.dropdown-menu {
+    background-color: var(--color-slate);
+    border: 1px solid var(--color-gold);
+    border-radius: 0.5rem;
+    display: grid;
+    gap: 0.25rem;
+    left: 0;
+    list-style: none;
+    min-width: 10rem;
+    padding: 0.5rem;
+    position: absolute;
+    top: calc(100% + 0.35rem);
+    z-index: 10;
+}
+
+.dropdown-menu .nav-link {
+    display: block;
+    text-align: left;
+    width: 100%;
+}
+
 .site-header>nav>a {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
+
 .site-header>nav>a>span {
     font-size: 1.5rem;
     font-weight: 600;
@@ -74,8 +124,12 @@
         flex-direction: column;
     }
 
-    .site-header nav ul {
+    .site-header>nav>ul {
         justify-content: center;
         flex-wrap: wrap;
+    }
+
+    .dropdown-menu {
+        position: static;
     }
 }

@@ -1,8 +1,15 @@
 ---
+import DropdownMenu from "./DropdownMenu.astro";
+
 const navItems = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about/" },
-  { label: "Staff", href: "/staff/" },
+  {
+    label: "About",
+    items: [
+      { label: "About Us", href: "/about/" },
+      { label: "Our Staff", href: "/staff/" },
+    ],
+  },
   { label: "Contact", href: "/contact/" },
 ];
 
@@ -23,14 +30,22 @@ const currentPath = Astro.url.pathname;
     <ul>
       {
         navItems.map((item) => (
-          <li>
-            <a
-              href={item.href}
-              class={currentPath === item.href ? "nav-link active" : "nav-link"}
-            >
-              {item.label}
-            </a>
-          </li>
+          item.items ? (
+            <DropdownMenu
+              label={item.label}
+              items={item.items}
+              currentPath={currentPath}
+            />
+          ) : (
+            <li>
+              <a
+                href={item.href}
+                class:list={["nav-link", currentPath === item.href && "active"]}
+              >
+                {item.label}
+              </a>
+            </li>
+          )
         ))
       }
     </ul>
