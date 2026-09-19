@@ -29,28 +29,41 @@
 
 .site-header .nav-link {
     border: 0;
-    background-color: var(--color-slate);
+    background-color: transparent;
     color: var(--color-text-light);
     text-decoration: none;
-    padding: 8px 12px;
-    border-radius: 6px;
     font-weight: 600;
-    transition: all 0.1s ease;
     align-items: center;
     box-sizing: border-box;
     display: inline-flex;
     line-height: 1.2;
     min-height: 2.25rem;
+    padding: 0.65rem 0.75rem;
+    position: relative;
+    transition: color 0.2s ease;
 }
 
-.site-header .nav-link:hover {
-    background-color: var(--color-burgundy);
-    color: var(--color-gold-light);
+.site-header .nav-link::after {
+    background-color: var(--color-gold);
+    bottom: 0.25rem;
+    content: "";
+    height: 2px;
+    left: 0.75rem;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.2s ease;
+    width: calc(100% - 1.5rem);
 }
 
+.site-header .nav-link:hover,
 .site-header .nav-link.active {
-    background-color: var(--color-burgundy);
     color: var(--color-gold-light);
+}
+
+.site-header .nav-link:hover::after,
+.site-header .nav-link.active::after {
+    transform: scaleX(1);
 }
 
 .nav-dropdown summary {
@@ -65,12 +78,6 @@
     display: none;
 }
 
-.nav-dropdown summary::after {
-    content: "▾";
-    font-size: 0.75em;
-    margin-left: 0.4rem;
-}
-
 .dropdown-menu {
     background-color: var(--color-slate);
     border: 1px solid var(--color-gold);
@@ -80,16 +87,44 @@
     left: 0;
     list-style: none;
     min-width: 10rem;
+    opacity: 0;
     padding: 0.5rem;
     position: absolute;
     top: calc(100% + 0.35rem);
+    transform: translateY(-0.25rem);
+    transition:
+        opacity 0.18s ease,
+        transform 0.18s ease,
+        visibility 0s linear 0.18s;
+    visibility: hidden;
     z-index: 10;
 }
 
+.nav-dropdown details[open] .dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0s;
+    visibility: visible;
+}
+
 .dropdown-menu .nav-link {
-    display: block;
+    display: flex;
+    border-radius: 0.35rem;
+    min-height: auto;
+    padding: 0.55rem 0.75rem;
+    position: relative;
     text-align: left;
     width: 100%;
+}
+
+.dropdown-menu .nav-link::after {
+    display: none;
+}
+
+.dropdown-menu .nav-link:hover,
+.dropdown-menu .nav-link.active {
+    background-color: var(--color-burgundy);
+    color: var(--color-gold-light);
 }
 
 .site-header>nav>a {
