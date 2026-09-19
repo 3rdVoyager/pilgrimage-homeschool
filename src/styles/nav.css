@@ -147,10 +147,91 @@
 
 .site-footer {
     background-color: var(--color-slate);
-    padding: 1rem;
-    text-align: center;
     color: var(--color-text-light);
     border-top: 3px solid var(--color-gold);
+    margin-top: 2rem;
+}
+
+.footer-inner {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: minmax(14rem, 1.3fr) 2fr;
+    margin: 0 auto;
+    max-width: 68rem;
+    padding: clamp(2rem, 5vw, 4rem) 1rem;
+}
+
+.footer-brand {
+    max-width: 22rem;
+}
+
+.footer-logo {
+    align-items: center;
+    color: var(--color-text-light);
+    display: inline-flex;
+    font-size: 1.25rem;
+    font-weight: 700;
+    gap: 0.75rem;
+}
+
+.footer-logo img {
+    height: 3rem;
+    object-fit: contain;
+    width: 3rem;
+}
+
+.footer-brand p {
+    color: var(--color-slate-light);
+    font-size: 0.95rem;
+    margin-top: 1rem;
+}
+
+.footer-columns {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.footer-column h2 {
+    color: var(--color-gold-light);
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.footer-column ul {
+    display: grid;
+    gap: 0.5rem;
+    list-style: none;
+}
+
+.footer-column a,
+.footer-link-placeholder {
+    color: var(--color-slate-light);
+    font-size: 0.95rem;
+}
+
+.footer-column a {
+    transition: color 0.2s ease;
+}
+
+.footer-column a:hover {
+    color: var(--color-gold-light);
+}
+
+.footer-link-placeholder {
+    color: var(--color-muted);
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--color-muted);
+    margin: 0 auto;
+    max-width: 68rem;
+    padding: 1rem;
+}
+
+.footer-bottom p {
+    color: var(--color-slate-light);
+    font-size: 0.85rem;
 }
 
 @media (max-width: 650px) {
@@ -166,5 +247,13 @@
 
     .dropdown-menu {
         position: static;
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-columns {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
