@@ -57,7 +57,7 @@ const footerColumns: FooterColumn[] = [
               {column.links.map((link) => (
                 <li>
                   {link.href ? (
-                    <a href={link.href}>{link.label}</a>
+                    <a href={link.href!}>{link.label}</a>
                   ) : (
                     <span class="footer-link-placeholder">{link.label}</span>
                   )}
