@@ -197,6 +197,150 @@ export default defineConfig({
           router: ({ document }) => `/${document._sys.filename}`,
         },
       },
+      {
+        name: "site",
+        label: "Site settings",
+        path: "src/content",
+        format: "json",
+        match: {
+          include: "site",
+        },
+        fields: [
+          {
+            type: "object",
+            name: "header",
+            label: "Header",
+            fields: [
+              {
+                type: "string",
+                name: "siteName",
+                label: "Site name",
+                required: true,
+              },
+              {
+                type: "string",
+                name: "logoAlt",
+                label: "Logo alt text",
+                required: true,
+              },
+              {
+                type: "object",
+                name: "navItems",
+                label: "Navigation",
+                list: true,
+                ui: {
+                  itemProps: (item) => ({
+                    label: item?.label || "Navigation item",
+                  }),
+                },
+                fields: [
+                  {
+                    type: "string",
+                    name: "label",
+                    label: "Label",
+                    required: true,
+                  },
+                  {
+                    type: "string",
+                    name: "href",
+                    label: "Link",
+                  },
+                  {
+                    type: "object",
+                    name: "items",
+                    label: "Dropdown links",
+                    list: true,
+                    ui: {
+                      itemProps: (item) => ({
+                        label: item?.label || "Dropdown link",
+                      }),
+                    },
+                    fields: [
+                      {
+                        type: "string",
+                        name: "label",
+                        label: "Label",
+                        required: true,
+                      },
+                      {
+                        type: "string",
+                        name: "href",
+                        label: "Link",
+                        required: true,
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            type: "object",
+            name: "footer",
+            label: "Footer",
+            fields: [
+              {
+                type: "string",
+                name: "description",
+                label: "Description",
+                required: true,
+                ui: {
+                  component: "textarea",
+                },
+              },
+              {
+                type: "object",
+                name: "columns",
+                label: "Link columns",
+                list: true,
+                ui: {
+                  itemProps: (item) => ({
+                    label: item?.title || "Footer link column",
+                  }),
+                },
+                fields: [
+                  {
+                    type: "string",
+                    name: "title",
+                    label: "Column title",
+                    required: true,
+                  },
+                  {
+                    type: "object",
+                    name: "links",
+                    label: "Links",
+                    list: true,
+                    ui: {
+                      itemProps: (item) => ({
+                        label: item?.label || "Footer link",
+                      }),
+                    },
+                    fields: [
+                      {
+                        type: "string",
+                        name: "label",
+                        label: "Label",
+                        required: true,
+                      },
+                      {
+                        type: "string",
+                        name: "href",
+                        label: "Link",
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                type: "string",
+                name: "copyright",
+                label: "Copyright text",
+                required: true,
+              },
+            ],
+          },
+        ],
+      },
     ],
   },
 });

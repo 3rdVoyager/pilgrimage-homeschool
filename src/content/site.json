@@ -1,0 +1,77 @@
+{
+  "header": {
+    "siteName": "Pilgrimage Homeschool",
+    "logoAlt": "Pilgrimage Homeschool logo",
+    "navItems": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "About",
+        "items": [
+          {
+            "label": "About Us",
+            "href": "/about/"
+          },
+          {
+            "label": "Our Staff",
+            "href": "/staff/"
+          }
+        ]
+      },
+      {
+        "label": "Resources",
+        "href": "/resources/"
+      },
+      {
+        "label": "Contact",
+        "href": "/contact/"
+      }
+    ]
+  },
+  "footer": {
+    "description": "A competitive homeschool Science Olympiad Team for students in grades 3-12.",
+    "columns": [
+      {
+        "title": "Explore",
+        "links": [
+          {
+            "label": "Home",
+            "href": "/"
+          },
+          {
+            "label": "About Us",
+            "href": "/about/"
+          },
+          {
+            "label": "Our Staff",
+            "href": "/staff/"
+          }
+        ]
+      },
+      {
+        "title": "More Information",
+        "links": [
+          {
+            "label": "Resources",
+            "href": "/resources/"
+          }
+        ]
+      },
+      {
+        "title": "Connect",
+        "links": [
+          {
+            "label": "Contact Us",
+            "href": "/contact/"
+          },
+          {
+            "label": "Join the Team"
+          }
+        ]
+      }
+    ],
+    "copyright": "Pilgrimage Homeschool Science Olympiad Team. All rights reserved."
+  }
+}

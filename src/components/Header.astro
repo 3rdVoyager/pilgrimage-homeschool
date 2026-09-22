@@ -1,19 +1,9 @@
 ---
 import DropdownMenu from "./DropdownMenu.astro";
+import type { SiteSettings } from "../types/content";
 
-const navItems = [
-  { label: "Home", href: "/" },
-  {
-    label: "About",
-    items: [
-      { label: "About Us", href: "/about/" },
-      { label: "Our Staff", href: "/staff/" },
-    ],
-  },
-  { label: "Resources", href: "/resources/" },
-  { label: "Contact", href: "/contact/" },
-];
-
+type Props = SiteSettings["header"];
+const { siteName, logoAlt, navItems } = Astro.props as Props;
 const currentPath = Astro.url.pathname;
 ---
 
@@ -23,15 +13,15 @@ const currentPath = Astro.url.pathname;
       <img
           src="/favicon/favicon.svg"
         class="brand-logo"
-        alt="Pilgrimage Homeschool logo"
+        alt={logoAlt}
       />
-      <span>Pilgrimage Homeschool</span>
+      <span>{siteName}</span>
     </a>
 
     <ul>
       {
         navItems.map((item) => (
-          item.items ? (
+          item.items?.length ? (
             <DropdownMenu
               label={item.label}
               items={item.items}

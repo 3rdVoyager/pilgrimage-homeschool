@@ -57,3 +57,10 @@ export const getPage = async (slug: string) => {
     },
   };
 };
+
+export const getSiteSettings = async () => {
+  return requestWithMetadata(
+    client.queries.site({ relativePath: "site.json" }),
+    { priority: "primary" },
+  );
+};

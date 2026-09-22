@@ -55,3 +55,32 @@ export type PageContent = {
   description: string;
   sections: ContentSection[];
 };
+
+export type SiteNavItem = {
+  label: string;
+  href?: string;
+  items?: SiteNavItem[];
+};
+
+export type SiteFooterLink = {
+  label: string;
+  href?: string;
+};
+
+export type SiteFooterColumn = {
+  title: string;
+  links: SiteFooterLink[];
+};
+
+export type SiteSettings = {
+  header: {
+    siteName: string;
+    logoAlt: string;
+    navItems: SiteNavItem[];
+  };
+  footer: {
+    description: string;
+    columns: SiteFooterColumn[];
+    copyright: string;
+  };
+};
