@@ -1,0 +1,143 @@
+backend:
+  name: github
+  repo: 3rdVoyager/pilgrimage-homeschool
+  branch: configure-decap-cms
+
+media_folder: public/uploads
+public_folder: /uploads
+
+collections:
+  - name: pages
+    label: Pages
+    folder: src/content/pages
+    create: true
+    format: json
+    extension: json
+    slug: "{{slug}}"
+    identifier_field: title
+    fields:
+      - label: Page title
+        name: title
+        widget: string
+      - label: Page description
+        name: description
+        widget: text
+      - label: Sections
+        name: sections
+        widget: list
+        fields:
+          - label: Section style
+            name: variant
+            widget: select
+            options:
+              - default
+              - hero
+              - emphasized
+            default: default
+          - label: Content blocks
+            name: blocks
+            widget: list
+            types:
+              - label: Markdown text
+                name: text
+                widget: object
+                fields:
+                  - label: Content
+                    name: content
+                    widget: markdown
+              - label: Image
+                name: image
+                widget: object
+                fields:
+                  - label: Image
+                    name: content
+                    widget: image
+                  - label: Alternative text
+                    name: alt
+                    widget: string
+              - label: Button
+                name: button
+                widget: object
+                fields:
+                  - label: Button label
+                    name: content
+                    widget: string
+                  - label: Link
+                    name: href
+                    widget: string
+                  - label: Button style
+                    name: variant
+                    widget: select
+                    options:
+                      - primary
+                      - secondary
+                    default: primary
+                  - label: Open in a new tab
+                    name: external
+                    widget: boolean
+                    default: false
+              - label: Card grid
+                name: card-grid
+                widget: object
+                fields:
+                  - label: Grid width
+                    name: grid
+                    widget: select
+                    options:
+                      - compact
+                      - standard
+                      - wide
+                    default: standard
+                  - label: Cards
+                    name: cards
+                    widget: list
+                    fields:
+                      - label: Card style
+                        name: variant
+                        widget: select
+                        options:
+                          - default
+                          - emphasized
+                        default: default
+                      - label: Card content
+                        name: blocks
+                        widget: list
+                        types:
+                          - label: Markdown text
+                            name: text
+                            widget: object
+                            fields:
+                              - label: Content
+                                name: content
+                                widget: markdown
+                          - label: Image
+                            name: image
+                            widget: object
+                            fields:
+                              - label: Image
+                                name: content
+                                widget: image
+                              - label: Alternative text
+                                name: alt
+                                widget: string
+                          - label: Button
+                            name: button
+                            widget: object
+                            fields:
+                              - label: Button label
+                                name: content
+                                widget: string
+                              - label: Link
+                                name: href
+                                widget: string
+                              - label: Button style
+                                name: variant
+                                widget: select
+                                options:
+                                  - primary
+                                  - secondary
+                                default: primary
+                              - label: Open in a new tab
+                                name: external
+                                widget: boolean
+                                default: false
