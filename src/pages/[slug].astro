@@ -1,27 +1,32 @@
 ---
-import PageRenderer from "../components/PageRenderer.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TinaIsland from "@tinacms/astro/TinaIsland.astro";
+import PageSections from "../components/PageSections.astro";
+import { getPage } from "../lib/tina/data";
+import { islands } from "../lib/tina/islands";
 import type { PageContent } from "../types/content";
 
-export function getStaticPaths() {
-  const pages = import.meta.glob("../content/pages/*.json", {
-    eager: true,
-    import: "default",
-  }) as Record<string, PageContent>;
+const slug = Astro.params.slug ?? "";
+const pageFiles = import.meta.glob("../content/pages/*.json");
 
-  return Object.entries(pages)
-    .filter(([path]) => !path.endsWith("/index.json"))
-    .map(([path, page]) => {
-      const fileName = path.split("/").pop() ?? "";
-      const slug = fileName.replace(/\.json$/, "");
-
-      return {
-        params: { slug },
-        props: { page, slug },
-      };
-    });
+if (!pageFiles[`../content/pages/${slug}.json`]) {
+  return new Response("Not Found", { status: 404 });
 }
 
-const { page, slug } = Astro.props;
+const result = await getPage(slug);
+const page = result.data?.page as PageContent | undefined;
+
+if (!page) {
+  return new Response("Not Found", { status: 404 });
+}
 ---
 
-<PageRenderer page={page} slug={slug} />
+<BaseLayout title={page.title} description={page.description}>
+  <TinaIsland
+    name="page"
+    wrapper={islands.page.wrapper}
+    params={{ slug }}
+  >
+    <PageSections page={page} />
+  </TinaIsland>
+</BaseLayout>

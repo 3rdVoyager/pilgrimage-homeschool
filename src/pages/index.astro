@@ -1,9 +1,25 @@
 ---
-import PageRenderer from "../components/PageRenderer.astro";
-import page from "../content/pages/index.json";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TinaIsland from "@tinacms/astro/TinaIsland.astro";
+import PageSections from "../components/PageSections.astro";
+import { getPage } from "../lib/tina/data";
+import { islands } from "../lib/tina/islands";
 import type { PageContent } from "../types/content";
 
-const pageContent = page as PageContent;
+const result = await getPage("index");
+const page = result.data?.page as PageContent | undefined;
+
+if (!page) {
+  return new Response("Not Found", { status: 404 });
+}
 ---
 
-<PageRenderer page={pageContent} slug="index" />
+<BaseLayout title={page.title} description={page.description}>
+  <TinaIsland
+    name="page"
+    wrapper={islands.page.wrapper}
+    params={{ slug: "index" }}
+  >
+    <PageSections page={page} />
+  </TinaIsland>
+</BaseLayout>

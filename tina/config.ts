@@ -1,4 +1,4 @@
-import { defineConfig } from "tinacms";
+import { defineConfig, type Template } from "tinacms";
 
 // Your hosting provider likely exposes this as an environment variable
 const branch =
@@ -6,6 +6,96 @@ const branch =
   process.env.VERCEL_GIT_COMMIT_REF ||
   process.env.HEAD ||
   "main";
+
+const createTextBlockTemplate = (): Template => ({
+  name: "text",
+  label: "Rich text",
+  fields: [
+    {
+      type: "rich-text",
+      name: "content",
+      label: "Content",
+      required: true,
+      overrides: {
+        toolbar: ["heading", "bold", "italic", "link", "ul", "ol"],
+        headingLevels: ["h1", "h2", "h3"],
+      },
+    },
+  ],
+});
+
+const createImageBlockTemplate = (): Template => ({
+  name: "image",
+  label: "Image",
+  fields: [
+    { type: "image", name: "src", label: "Image", required: true },
+    { type: "string", name: "alt", label: "Alt text", required: true },
+  ],
+});
+
+const createButtonBlockTemplate = (): Template => ({
+  name: "button",
+  label: "Button",
+  fields: [
+    { type: "string", name: "label", label: "Button label", required: true },
+    { type: "string", name: "href", label: "Link", required: true },
+    {
+      type: "string",
+      name: "variant",
+      label: "Button style",
+      required: true,
+      options: ["primary", "secondary"],
+    },
+    {
+      type: "boolean",
+      name: "external",
+      label: "Open in new tab",
+      required: true,
+    },
+  ],
+});
+
+const createCardGridTemplate = (): Template => ({
+  name: "card_grid",
+  nameOverride: "card-grid",
+  label: "Card grid",
+  fields: [
+    {
+      type: "string",
+      name: "grid",
+      label: "Grid width",
+      required: true,
+      options: ["compact", "standard", "wide"],
+    },
+    {
+      type: "object",
+      name: "cards",
+      label: "Cards",
+      list: true,
+      fields: [
+        {
+          type: "string",
+          name: "variant",
+          label: "Card style",
+          required: true,
+          options: ["default", "emphasized"],
+        },
+        {
+          type: "object",
+          name: "blocks",
+          label: "Card content",
+          list: true,
+          templateKey: "type",
+          templates: [
+            createTextBlockTemplate(),
+            createImageBlockTemplate(),
+            createButtonBlockTemplate(),
+          ],
+        },
+      ],
+    },
+  ],
+});
 
 export default defineConfig({
   branch,
@@ -40,7 +130,7 @@ export default defineConfig({
         path: "src/content/pages",
         format: "json",
         match: {
-          include: "about",
+          include: "*",
         },
         fields: [
           {
@@ -54,6 +144,7 @@ export default defineConfig({
             type: "string",
             name: "description",
             label: "Page description",
+            required: true,
             ui: {
               component: "textarea",
             },
@@ -83,6 +174,7 @@ export default defineConfig({
                 type: "string",
                 name: "variant",
                 label: "Section color",
+                required: true,
                 options: ["blue", "gold", "white", "burgundy-light"],
               },
               {
@@ -92,28 +184,10 @@ export default defineConfig({
                 list: true,
                 templateKey: "type",
                 templates: [
-                  {
-                    name: "text",
-                    label: "Rich text",
-                    fields: [
-                      {
-                        type: "rich-text",
-                        name: "content",
-                        label: "Content",
-                        overrides: {
-                          toolbar: [
-                            "heading",
-                            "bold",
-                            "italic",
-                            "link",
-                            "ul",
-                            "ol",
-                          ],
-                          headingLevels: ["h1", "h2", "h3"],
-                        },
-                      },
-                    ],
-                  },
+                  createTextBlockTemplate(),
+                  createImageBlockTemplate(),
+                  createButtonBlockTemplate(),
+                  createCardGridTemplate(),
                 ],
               },
             ],

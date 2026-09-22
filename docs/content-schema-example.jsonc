@@ -17,7 +17,7 @@
           },
           {
             "type": "button",
-            "content": "Learn more about us",
+            "label": "Learn more about us",
             "href": "/about",
             // Available button variants: "primary", "secondary"
             "variant": "primary"
@@ -34,7 +34,7 @@
           },
           {
             "type": "image",
-            "content": "/uploads/example-team.jpg",
+            "src": "/uploads/example-team.jpg",
             "alt": "Pilgrimage Homeschool students working together"
           }
         ]
@@ -73,7 +73,7 @@
                   },
                   {
                     "type": "button",
-                    "content": "View resources",
+                    "label": "View resources",
                     "href": "/resources",
                     "variant": "secondary"
                   }

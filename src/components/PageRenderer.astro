@@ -1,32 +1,15 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import ContentBlocks from "./ContentBlocks.astro";
+import PageSections from "./PageSections.astro";
 import type { PageContent } from "../types/content";
 
 interface Props {
   page: PageContent;
-  slug: string;
 }
 
-const { page, slug } = Astro.props;
+const { page } = Astro.props;
 ---
 
 <BaseLayout title={page.title} description={page.description}>
-  {
-    page.sections.map((section) => {
-      const isHero = section.variant === "hero";
-      const sectionClass = isHero ? "page-hero" : "page-section";
-      const variantClass =
-        section.variant && section.variant !== "default" && !isHero
-          ? `page-section-${section.variant}`
-          : undefined;
-      const homeHeroClass = isHero && slug === "index" ? "home-hero" : undefined;
-
-      return (
-        <section class:list={[sectionClass, variantClass, homeHeroClass]}>
-          <ContentBlocks blocks={section.blocks} />
-        </section>
-      );
-    })
-  }
+  <PageSections page={page} />
 </BaseLayout>

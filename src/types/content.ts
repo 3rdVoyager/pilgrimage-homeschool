@@ -15,26 +15,26 @@ export type TextBlock = {
 
 export type ImageBlock = {
   type: "image";
-  content: string;
+  src: string;
   alt: string;
 };
 
 export type ButtonBlock = {
   type: "button";
-  content: string;
+  label: string;
   href: string;
-  variant?: ButtonVariant;
-  external?: boolean;
+  variant: ButtonVariant;
+  external: boolean;
 };
 
 export type Card = {
-  variant?: CardVariant;
+  variant: CardVariant;
   blocks: ContentBlock[];
 };
 
 export type CardGridBlock = {
   type: "card-grid";
-  grid?: GridWidth;
+  grid: GridWidth;
   cards: Card[];
 };
 
@@ -45,8 +45,8 @@ export type ContentBlock =
   | CardGridBlock;
 
 export type ContentSection = {
-  title?: string;
-  variant?: SectionVariant;
+  title: string;
+  variant: SectionVariant;
   blocks: ContentBlock[];
 };
 

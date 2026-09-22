@@ -3,6 +3,7 @@
   "description": "Starting points and study materials for families learning about Science Olympiad.",
   "sections": [
     {
+      "title": "Resources",
       "variant": "blue",
       "blocks": [
         {
@@ -12,6 +13,7 @@
       ]
     },
     {
+      "title": "Science Olympiad resources",
       "variant": "white",
       "blocks": [
         {
@@ -23,6 +25,7 @@
           "grid": "wide",
           "cards": [
             {
+              "variant": "default",
               "blocks": [
                 {
                   "type": "text",
@@ -30,13 +33,15 @@
                 },
                 {
                   "type": "button",
-                  "content": "Visit resource",
+                  "label": "Visit resource",
                   "href": "https://drive.google.com/file/d/10zO-7GfzKbILcVrCv_DdBW95TY_Azywb/view?usp=drive_link",
+                  "variant": "primary",
                   "external": true
                 }
               ]
             },
             {
+              "variant": "default",
               "blocks": [
                 {
                   "type": "text",
@@ -44,13 +49,15 @@
                 },
                 {
                   "type": "button",
-                  "content": "Visit resource",
+                  "label": "Visit resource",
                   "href": "https://drive.google.com/open?id=10dLcHvW_POvParv6cjmmaiRft3xAGoun&usp=drive_copy",
+                  "variant": "primary",
                   "external": true
                 }
               ]
             },
             {
+              "variant": "default",
               "blocks": [
                 {
                   "type": "text",
@@ -58,13 +65,15 @@
                 },
                 {
                   "type": "button",
-                  "content": "Visit resource",
+                  "label": "Visit resource",
                   "href": "https://drive.google.com/open?id=10juSPKzjziNYL1sujXyJ8A_cS9dhLZrh&usp=drive_copy",
+                  "variant": "primary",
                   "external": true
                 }
               ]
             },
             {
+              "variant": "default",
               "blocks": [
                 {
                   "type": "text",
@@ -72,13 +81,15 @@
                 },
                 {
                   "type": "button",
-                  "content": "Visit resource",
+                  "label": "Visit resource",
                   "href": "https://drive.google.com/open?id=1zLPMbITxz-WeAfeBmo3_3NWesQ1XkwBB&usp=drive_copy",
+                  "variant": "primary",
                   "external": true
                 }
               ]
             },
             {
+              "variant": "default",
               "blocks": [
                 {
                   "type": "text",
@@ -86,13 +97,15 @@
                 },
                 {
                   "type": "button",
-                  "content": "Visit resource",
+                  "label": "Visit resource",
                   "href": "https://drive.google.com/open?id=1JBdPNjAbY_Y0SJ8vWhj4xk7keKXK9X54&usp=drive_copy",
+                  "variant": "primary",
                   "external": true
                 }
               ]
             },
             {
+              "variant": "default",
               "blocks": [
                 {
                   "type": "text",
@@ -100,13 +113,15 @@
                 },
                 {
                   "type": "button",
-                  "content": "Visit resource",
+                  "label": "Visit resource",
                   "href": "https://drive.google.com/open?id=16zQ40Hb9CtiUEHltu39m8es5-Fnz3W-f&usp=drive_copy",
+                  "variant": "primary",
                   "external": true
                 }
               ]
             },
             {
+              "variant": "default",
               "blocks": [
                 {
                   "type": "text",
@@ -114,13 +129,15 @@
                 },
                 {
                   "type": "button",
-                  "content": "Visit resource",
+                  "label": "Visit resource",
                   "href": "https://drive.google.com/open?id=1acHjsBoNsRmxcVIy4Q1uxLC76QEtFYIH&usp=drive_copy",
+                  "variant": "primary",
                   "external": true
                 }
               ]
             },
             {
+              "variant": "default",
               "blocks": [
                 {
                   "type": "text",
@@ -128,13 +145,15 @@
                 },
                 {
                   "type": "button",
-                  "content": "Visit resource",
+                  "label": "Visit resource",
                   "href": "https://drive.google.com/open?id=1Qn1fgdJJ1d-5IFK58VYUIdVBN7cT53xR&usp=drive_copy",
+                  "variant": "primary",
                   "external": true
                 }
               ]
             },
             {
+              "variant": "default",
               "blocks": [
                 {
                   "type": "text",
@@ -142,13 +161,15 @@
                 },
                 {
                   "type": "button",
-                  "content": "Visit resource",
+                  "label": "Visit resource",
                   "href": "https://drive.google.com/open?id=1mRY-jBfqNNbpTgrNqgeY-1rq2fck6MC4&usp=drive_copy",
+                  "variant": "primary",
                   "external": true
                 }
               ]
             },
             {
+              "variant": "default",
               "blocks": [
                 {
                   "type": "text",
@@ -156,8 +177,9 @@
                 },
                 {
                   "type": "button",
-                  "content": "Visit resource",
+                  "label": "Visit resource",
                   "href": "https://pilgrimagestudycenter.pages.dev",
+                  "variant": "primary",
                   "external": true
                 }
               ]

@@ -3,6 +3,7 @@
   "description": "Meet the coaches, volunteers, and student leaders of Pilgrimage Homeschool Science Olympiad.",
   "sections": [
     {
+      "title": "Our Staff",
       "variant": "blue",
       "blocks": [
         {
@@ -12,6 +13,7 @@
       ]
     },
     {
+      "title": "Coaching Staff",
       "variant": "white",
       "blocks": [
         {
@@ -27,7 +29,7 @@
               "blocks": [
                 {
                   "type": "image",
-                  "content": "/assets/images/Cheryl.jpg",
+                  "src": "/assets/images/Cheryl.jpg",
                   "alt": "Mrs Cheryl Booth portrait"
                 },
                 {
@@ -41,7 +43,7 @@
               "blocks": [
                 {
                   "type": "image",
-                  "content": "/assets/images/Peter.jpg",
+                  "src": "/assets/images/Peter.jpg",
                   "alt": "Mr Peter Chen portrait"
                 },
                 {
@@ -55,7 +57,7 @@
               "blocks": [
                 {
                   "type": "image",
-                  "content": "/assets/images/Maria.jpg",
+                  "src": "/assets/images/Maria.jpg",
                   "alt": "Mrs Maria Kinsinger portrait"
                 },
                 {
@@ -69,7 +71,7 @@
               "blocks": [
                 {
                   "type": "image",
-                  "content": "/assets/images/West.jpg",
+                  "src": "/assets/images/West.jpg",
                   "alt": "Mr West Coile portrait"
                 },
                 {
@@ -83,6 +85,7 @@
       ]
     },
     {
+      "title": "Officers",
       "variant": "white",
       "blocks": [
         {
@@ -94,6 +97,7 @@
           "grid": "compact",
           "cards": [
             {
+              "variant": "default",
               "blocks": [
                 {
                   "type": "text",
@@ -102,6 +106,7 @@
               ]
             },
             {
+              "variant": "default",
               "blocks": [
                 {
                   "type": "text",
@@ -110,6 +115,7 @@
               ]
             },
             {
+              "variant": "default",
               "blocks": [
                 {
                   "type": "text",
@@ -122,6 +128,7 @@
       ]
     },
     {
+      "title": "Student Assistants",
       "variant": "white",
       "blocks": [
         {
@@ -133,6 +140,7 @@
           "grid": "compact",
           "cards": [
             {
+              "variant": "default",
               "blocks": [
                 {
                   "type": "text",
@@ -141,6 +149,7 @@
               ]
             },
             {
+              "variant": "default",
               "blocks": [
                 {
                   "type": "text",
@@ -149,6 +158,7 @@
               ]
             },
             {
+              "variant": "default",
               "blocks": [
                 {
                   "type": "text",
@@ -157,6 +167,7 @@
               ]
             },
             {
+              "variant": "default",
               "blocks": [
                 {
                   "type": "text",
@@ -169,6 +180,7 @@
       ]
     },
     {
+      "title": "Board of Directors",
       "variant": "white",
       "blocks": [
         {
@@ -180,6 +192,7 @@
           "grid": "standard",
           "cards": [
             {
+              "variant": "default",
               "blocks": [
                 {
                   "type": "text",
@@ -188,6 +201,7 @@
               ]
             },
             {
+              "variant": "default",
               "blocks": [
                 {
                   "type": "text",
@@ -196,6 +210,7 @@
               ]
             },
             {
+              "variant": "default",
               "blocks": [
                 {
                   "type": "text",
@@ -204,6 +219,7 @@
               ]
             },
             {
+              "variant": "default",
               "blocks": [
                 {
                   "type": "text",
@@ -212,6 +228,7 @@
               ]
             },
             {
+              "variant": "default",
               "blocks": [
                 {
                   "type": "text",

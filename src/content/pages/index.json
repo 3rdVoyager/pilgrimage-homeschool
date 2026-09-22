@@ -3,6 +3,7 @@
   "description": "A competitive Science Olympiad team for homeschooled students in Maryland.",
   "sections": [
     {
+      "title": "Pilgrimage Homeschool",
       "variant": "blue",
       "blocks": [
         {
@@ -11,18 +12,22 @@
         },
         {
           "type": "button",
-          "content": "Learn About Us",
-          "href": "/about/"
+          "label": "Learn About Us",
+          "href": "/about/",
+          "variant": "primary",
+          "external": false
         },
         {
           "type": "button",
-          "content": "Contact Us",
+          "label": "Contact Us",
           "href": "/contact/",
-          "variant": "secondary"
+          "variant": "secondary",
+          "external": false
         }
       ]
     },
     {
+      "title": "About Us",
       "variant": "white",
       "blocks": [
         {
@@ -32,6 +37,7 @@
       ]
     },
     {
+      "title": "About Science Olympiad",
       "variant": "white",
       "blocks": [
         {
@@ -74,6 +80,7 @@
       ]
     },
     {
+      "title": "Past Successes",
       "variant": "gold",
       "blocks": [
         {

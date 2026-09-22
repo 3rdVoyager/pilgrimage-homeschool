@@ -2,6 +2,36 @@
 import { requestWithMetadata } from '@tinacms/astro/data';
 import client from '../../../tina/__generated__/client';
 
+const blockTypes = {
+  PageSectionsBlocksText: "text",
+  PageSectionsBlocksImage: "image",
+  PageSectionsBlocksButton: "button",
+  PageSectionsBlocksCard_grid: "card-grid",
+  PageSectionsBlocksCard_gridCardsBlocksText: "text",
+  PageSectionsBlocksCard_gridCardsBlocksImage: "image",
+  PageSectionsBlocksCard_gridCardsBlocksButton: "button",
+} as const;
+
+const normalizeBlock = (block: any): any => {
+  if (!block) {
+    return block;
+  }
+
+  const normalized = {
+    ...block,
+    type: blockTypes[block.__typename as keyof typeof blockTypes] ?? block.type,
+  };
+
+  if (normalized.type === "card-grid") {
+    normalized.cards = normalized.cards?.map((card: any) => ({
+      ...card,
+      blocks: card.blocks?.map(normalizeBlock),
+    }));
+  }
+
+  return normalized;
+};
+
 export const getPage = async (slug: string) => {
   const result = await requestWithMetadata(
     client.queries.page({ relativePath: slug + ".json" }),
@@ -21,11 +51,7 @@ export const getPage = async (slug: string) => {
         ...page,
         sections: page.sections?.map((section) => ({
           ...section,
-          blocks: section.blocks?.map((block) => ({
-            ...block,
-            // Tina exposes the selected template as __typename in GraphQL.
-            type: block.__typename === "PageSectionsBlocksText" ? "text" : "",
-          })),
+          blocks: section.blocks?.map(normalizeBlock),
         })),
       },
     },
