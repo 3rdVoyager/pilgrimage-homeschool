@@ -1,0 +1,93 @@
+{
+  "title": "Pilgrimage Homeschool Science Olympiad",
+  "description": "A competitive Science Olympiad team for homeschooled students in Maryland.",
+  "sections": [
+    {
+      "title": "Pilgrimage Homeschool",
+      "variant": "blue",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "# Pilgrimage Homeschool\n\nA competitive Science Olympiad team for homeschooled students in Maryland."
+        },
+        {
+          "type": "button",
+          "label": "Learn About Us",
+          "href": "/about/",
+          "variant": "burgundy",
+          "external": false
+        },
+        {
+          "type": "button",
+          "label": "Contact Us",
+          "href": "/contact/",
+          "variant": "gold",
+          "external": false
+        }
+      ]
+    },
+    {
+      "title": "About Us",
+      "variant": "white",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "## About Us\n\nPilgrimage Homeschool Science Olympiad Team is the only non school-affiliated team of over 70 schools competing in Maryland. Pilgrimage has been highly competitive since 2010, coming 1st in the state of Maryland four times to represent Maryland at the national tournament. Our Division B or Middle School team has never placed under the top 5 of 30 in the state tournament."
+        }
+      ]
+    },
+    {
+      "title": "About Science Olympiad",
+      "variant": "white",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "## About Science Olympiad\n\nIn Science Olympiad, students compete in events, which are essentially tests of their knowledge in many different scientific areas. There are three types of events:"
+        },
+        {
+          "type": "card-grid",
+          "grid": "standard",
+          "cards": [
+            {
+              "variant": "white",
+              "blocks": [
+                {
+                  "type": "text",
+                  "content": "### Study Events\n\nComposed of a subject test, such as Meteorology."
+                }
+              ]
+            },
+            {
+              "variant": "white",
+              "blocks": [
+                {
+                  "type": "text",
+                  "content": "### Build Events\n\nRequire students to create a scientific device, such as a Tower."
+                }
+              ]
+            },
+            {
+              "variant": "white",
+              "blocks": [
+                {
+                  "type": "text",
+                  "content": "### Lab Events\n\nConsist of a test and hands-on analysis portion, such as Forensics."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Past Successes",
+      "variant": "gold",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "## Past Successes\n\nIn April 2024, Pilgrimage Homeschool competed at the Maryland State Tournament for Divisions A, B & C, also known as Elementary, Middle and High School. Pilgrimage's elementary school team rose from 2nd place in 2023 to 1st place in 2024! Our middle school team earned the 4th place spot in the state!"
+        }
+      ]
+    }
+  ]
+}

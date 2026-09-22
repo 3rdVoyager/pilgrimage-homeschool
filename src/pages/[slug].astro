@@ -6,7 +6,14 @@ import { getPage } from "../lib/tina/data";
 import { islands } from "../lib/tina/islands";
 import type { PageContent } from "../types/content";
 
-const result = await getPage("index");
+const slug = Astro.params.slug ?? "";
+const pageFiles = import.meta.glob("../content/pages/*.json");
+
+if (!pageFiles[`../content/pages/${slug}.json`]) {
+  return new Response("Not Found", { status: 404 });
+}
+
+const result = await getPage(slug);
 const page = result.data?.page as PageContent | undefined;
 
 if (!page) {
@@ -18,7 +25,7 @@ if (!page) {
   <TinaIsland
     name="page"
     wrapper={islands.page.wrapper}
-    params={{ slug: "index" }}
+    params={{ slug }}
   >
     <PageSections page={page} />
   </TinaIsland>

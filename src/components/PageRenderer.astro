@@ -1,0 +1,15 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageSections from "./PageSections.astro";
+import type { PageContent } from "../types/content";
+
+interface Props {
+  page: PageContent;
+}
+
+const { page } = Astro.props;
+---
+
+<BaseLayout title={page.title} description={page.description}>
+  <PageSections page={page} />
+</BaseLayout>

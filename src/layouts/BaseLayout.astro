@@ -1,9 +1,17 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import { getSiteSettings } from "../lib/tina/data";
+import type { SiteSettings } from "../types/content";
 import "../styles/main.css";
 
 const { title, description = "Pilgrimage Homeschool Science Olympiad" } = Astro.props;
+const siteResult = await getSiteSettings();
+const site = siteResult.data?.site as SiteSettings | undefined;
+
+if (!site) {
+  throw new Error("Site settings could not be loaded.");
+}
 ---
 
 <html lang="en">
@@ -12,18 +20,18 @@ const { title, description = "Pilgrimage Homeschool Science Olympiad" } = Astro.
     <meta name="viewport" content="width=device-width" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
-    <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
-    <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
   </head>
 
   <body>
-    <Header />
+    <Header {...site.header} />
 
     <main>
       <slot />
     </main>
 
-    <Footer />
+    <Footer {...site} />
   </body>
 </html>

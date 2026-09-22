@@ -1,0 +1,29 @@
+---
+import Card from "./Card.astro";
+import ContentBlocks from "./ContentBlocks.astro";
+import type { CardGridBlock, GridWidth } from "../types/content";
+
+interface Props {
+  block: CardGridBlock;
+}
+
+const { block } = Astro.props;
+
+const gridWidths: Record<GridWidth, string> = {
+  compact: "13rem",
+  standard: "16rem",
+  wide: "24rem",
+};
+
+const gridWidth = gridWidths[block.grid];
+---
+
+<div class="card-grid" style={`--grid-min-width: ${gridWidth};`}>
+  {
+    block.cards.map((card) => (
+      <Card variant={card.variant}>
+        <ContentBlocks blocks={card.blocks} />
+      </Card>
+    ))
+  }
+</div>

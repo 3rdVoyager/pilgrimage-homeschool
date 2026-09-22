@@ -1,0 +1,89 @@
+{
+  "page": {
+    "title": "Example Page | Pilgrimage Homeschool",
+    "description": "An example of the reusable content schema.",
+    "sections": [
+      {
+        // Section colors control the reusable background treatment.
+        // Available values: "blue", "gold", "white", "burgundy-light"
+        "title": "Welcome",
+        "variant": "blue",
+        "blocks": [
+          {
+            // Rich text supports headings, paragraphs, bold, italic, links, and lists.
+            // Tina provides a toolbar; the stored content remains Markdown-compatible.
+            "type": "text",
+            "content": "# Welcome to Pilgrimage\n\nStudents learn science through competition, teamwork, and hands-on experience."
+          },
+          {
+            "type": "button",
+            "label": "Learn more about us",
+            "href": "/about",
+            // Available button variants: "burgundy", "gold"
+            "variant": "burgundy",
+            "external": false
+          }
+        ]
+      },
+      {
+        "title": "A flexible content section",
+        "variant": "white",
+        "blocks": [
+          {
+            "type": "text",
+            "content": "## A flexible content section\n\nRich text can use **bold text**, *italic text*, and [links](/contact)."
+          },
+          {
+            "type": "image",
+            "src": "/uploads/example-team.jpg",
+            "alt": "Pilgrimage Homeschool students working together"
+          }
+        ]
+      },
+      {
+        "title": "Explore Science Olympiad",
+        "variant": "gold",
+        "blocks": [
+          {
+            "type": "text",
+            "content": "## Explore Science Olympiad\n\nChoose an area to learn more about the ways students can participate."
+          },
+          {
+            "type": "card-grid",
+            // Grid presets control the minimum width of each card.
+            // Available values: "compact", "standard", "wide"
+            "grid": "standard",
+            "cards": [
+              {
+                // Card variants use the same color options as sections.
+                "variant": "white",
+                "blocks": [
+                  {
+                    "type": "text",
+                    "content": "### Study events\n\nExplore events that focus on research, identification, and scientific knowledge."
+                  }
+                ]
+              },
+              {
+                "variant": "white",
+                "blocks": [
+                  {
+                    "type": "text",
+                    "content": "### Build events\n\nDesign, build, and test devices while developing engineering skills."
+                  },
+                  {
+                    "type": "button",
+                    "label": "View resources",
+                    "href": "/resources",
+                    "variant": "gold",
+                    "external": false
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

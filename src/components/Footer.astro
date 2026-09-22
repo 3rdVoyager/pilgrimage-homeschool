@@ -1,35 +1,9 @@
 ---
-type FooterLink = {
-  label: string;
-  href?: string;
-};
+import type { SiteSettings } from "../types/content";
 
-type FooterColumn = {
-  title: string;
-  links: FooterLink[];
-};
-
-const footerColumns: FooterColumn[] = [
-  {
-    title: "Explore",
-    links: [
-      { label: "Home", href: "/" },
-      { label: "About Us", href: "/about/" },
-      { label: "Our Staff", href: "/staff/" },
-    ],
-  },
-  {
-    title: "More Information",
-    links: [{ label: "Resources", href: "/resources/" }],
-  },
-  {
-    title: "Connect",
-    links: [
-      { label: "Contact Us", href: "/contact/" },
-      { label: "Join the Team" },
-    ],
-  },
-];
+const { header, footer } = Astro.props as SiteSettings;
+const { siteName, logoAlt } = header;
+const { description, columns, copyright } = footer;
 ---
 
 <footer class="site-footer">
@@ -37,19 +11,16 @@ const footerColumns: FooterColumn[] = [
     <div class="footer-brand">
       <a class="footer-logo" href="/">
         <img
-          src="/assets/favicon/favicon.svg"
-          alt="Pilgrimage Homeschool logo"
+          src="/favicon/favicon.svg"
+          alt={logoAlt}
         />
-        <span>Pilgrimage Homeschool</span>
+        <span>{siteName}</span>
       </a>
-      <p>
-        A competitive homeschool Science Olympiad Team for students in grades
-        3-12.
-      </p>
+      <p>{description}</p>
     </div>
 
     <div class="footer-columns">
-      {footerColumns.map((column) => (
+      {columns.map((column) => (
         <div class="footer-column">
           <h2>{column.title}</h2>
           <ul>
@@ -69,9 +40,6 @@ const footerColumns: FooterColumn[] = [
   </div>
 
   <div class="footer-bottom">
-    <p>
-      &copy; {new Date().getFullYear()} Pilgrimage Homeschool Science Olympiad
-      Team. All rights reserved.
-    </p>
+    <p>&copy; {new Date().getFullYear()} {copyright}</p>
   </div>
 </footer>

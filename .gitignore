@@ -1,5 +1,7 @@
 # build output
 dist/
+# Astro / Cloudflare local Wrangler deploy redirect (generated on dev/build; Windows paths break CI)
+.wrangler/
 # generated types
 .astro/
 
@@ -22,3 +24,8 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# Tina generated files
+tina/__generated__
+public/admin/index.html
+public/admin/assets/
