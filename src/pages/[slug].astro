@@ -9,6 +9,11 @@ import type { PageContent } from "../types/content";
 const slug = Astro.params.slug ?? "";
 const pageFiles = import.meta.glob("../content/pages/*.json");
 
+// Reserved for Tina CMS static admin (public/admin/index.html).
+if (slug === "admin") {
+  return Astro.redirect("/admin/index.html");
+}
+
 if (!pageFiles[`../content/pages/${slug}.json`]) {
   return new Response("Not Found", { status: 404 });
 }

@@ -1,0 +1,5 @@
+---
+// Tina generates the CMS UI at public/admin/index.html during `tinacms build`.
+// Without this route, [slug].astro treats "admin" as a page slug and returns 404.
+return Astro.redirect("/admin/index.html");
+---

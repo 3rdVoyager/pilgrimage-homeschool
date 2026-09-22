@@ -44,8 +44,12 @@ Optional (if TinaCloud needs the branch name during CI):
 2. Set the branch Tina should use for content (usually `main`).
 3. After Pages is live, set the site URL in TinaCloud so auth redirects work.
 
-Editors use `/admin/` on the deployed site (built into `public/admin` during
-`tinacms build`). Content changes commit through TinaCloud to Git.
+Editors use **`/admin/index.html`** (or `/admin/`, which redirects there) on the
+deployed site. The UI is built into `public/admin/` during `tinacms build`.
+Content changes commit through TinaCloud to Git.
+
+If `/admin/` showed a 404 before, `[slug].astro` was treating `admin` as a page
+slug. The explicit `src/pages/admin/index.astro` route fixes that.
 
 ## Wrangler
 
