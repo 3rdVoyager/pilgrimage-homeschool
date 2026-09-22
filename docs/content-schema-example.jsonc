@@ -4,12 +4,14 @@
     "description": "An example of the reusable content schema.",
     "sections": [
       {
-        // Section variants control background and overall visual treatment.
-        // Available values: "default", "hero", "emphasized"
-        "variant": "hero",
+        // Section colors control the reusable background treatment.
+        // Available values: "blue", "gold", "white", "burgundy-light"
+        "title": "Welcome",
+        "variant": "blue",
         "blocks": [
           {
-            // Text supports Markdown headings, paragraphs, bold, italic, links, and lists.
+            // Rich text supports headings, paragraphs, bold, italic, links, and lists.
+            // Tina provides a toolbar; the stored content remains Markdown-compatible.
             "type": "text",
             "content": "# Welcome to Pilgrimage\n\nStudents learn science through competition, teamwork, and hands-on experience."
           },
@@ -23,11 +25,12 @@
         ]
       },
       {
-        "variant": "default",
+        "title": "A flexible content section",
+        "variant": "white",
         "blocks": [
           {
             "type": "text",
-            "content": "## A flexible content section\n\nText blocks can use **bold text**, *italic text*, and [links](/contact) through Markdown."
+            "content": "## A flexible content section\n\nRich text can use **bold text**, *italic text*, and [links](/contact)."
           },
           {
             "type": "image",
@@ -37,7 +40,8 @@
         ]
       },
       {
-        "variant": "emphasized",
+        "title": "Explore Science Olympiad",
+        "variant": "gold",
         "blocks": [
           {
             "type": "text",
@@ -50,7 +54,8 @@
             "grid": "standard",
             "cards": [
               {
-                // Cards use the same variants as sections.
+                // Card variants are separate from section colors.
+                // The default card style is currently supported.
                 "variant": "default",
                 "blocks": [
                   {
@@ -60,7 +65,7 @@
                 ]
               },
               {
-                "variant": "emphasized",
+                "variant": "default",
                 "blocks": [
                   {
                     "type": "text",

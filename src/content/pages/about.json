@@ -3,7 +3,8 @@
   "description": "Learn more about the Pilgrimage Homeschool Science Olympiad team.",
   "sections": [
     {
-      "variant": "hero",
+      "title": "About Us",
+      "variant": "blue",
       "blocks": [
         {
           "type": "text",
@@ -12,7 +13,8 @@
       ]
     },
     {
-      "variant": "default",
+      "title": "What is Science Olympiad?",
+      "variant": "white",
       "blocks": [
         {
           "type": "text",
@@ -21,7 +23,8 @@
       ]
     },
     {
-      "variant": "default",
+      "title": "Our History",
+      "variant": "white",
       "blocks": [
         {
           "type": "text",

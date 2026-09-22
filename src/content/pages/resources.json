@@ -3,7 +3,7 @@
   "description": "Starting points and study materials for families learning about Science Olympiad.",
   "sections": [
     {
-      "variant": "hero",
+      "variant": "blue",
       "blocks": [
         {
           "type": "text",
@@ -12,7 +12,7 @@
       ]
     },
     {
-      "variant": "default",
+      "variant": "white",
       "blocks": [
         {
           "type": "text",
@@ -26,7 +26,7 @@
               "blocks": [
                 {
                   "type": "text",
-                  "content": "**Getting started**\n\n### Benefits of Science Olympiad\n\nAn introduction to the opportunities and benefits of participating in Science Olympiad."
+                  "content": "### Benefits of Science Olympiad\n\nAn introduction to the opportunities and benefits of participating in Science Olympiad."
                 },
                 {
                   "type": "button",
@@ -40,7 +40,7 @@
               "blocks": [
                 {
                   "type": "text",
-                  "content": "**Getting started**\n\n### Types of Events\n\nLearn how study, build, and laboratory events give students different ways to explore science."
+                  "content": "### Types of Events\n\nLearn how study, build, and laboratory events give students different ways to explore science."
                 },
                 {
                   "type": "button",
@@ -54,7 +54,7 @@
               "blocks": [
                 {
                   "type": "text",
-                  "content": "**Getting started**\n\n### Typical Season\n\nAn overview of what students and families can expect throughout a Science Olympiad season."
+                  "content": "### Typical Season\n\nAn overview of what students and families can expect throughout a Science Olympiad season."
                 },
                 {
                   "type": "button",
@@ -68,7 +68,7 @@
               "blocks": [
                 {
                   "type": "text",
-                  "content": "**Getting started**\n\n### What Is Science Olympiad?\n\nAn article explaining the competition and what students can expect from Science Olympiad."
+                  "content": "### What Is Science Olympiad?\n\nAn article explaining the competition and what students can expect from Science Olympiad."
                 },
                 {
                   "type": "button",
@@ -82,7 +82,7 @@
               "blocks": [
                 {
                   "type": "text",
-                  "content": "**Study and preparation**\n\n### Locations to Find Tests\n\nA guide to finding practice tests and other materials for event preparation."
+                  "content": "### Locations to Find Tests\n\nA guide to finding practice tests and other materials for event preparation."
                 },
                 {
                   "type": "button",
@@ -96,7 +96,7 @@
               "blocks": [
                 {
                   "type": "text",
-                  "content": "**Team information**\n\n### Team Expectations\n\nExpectations for Pilgrimage Homeschool students and families during the 2026 season."
+                  "content": "### Team Expectations\n\nExpectations for Pilgrimage Homeschool students and families during the 2026 season."
                 },
                 {
                   "type": "button",
@@ -110,7 +110,7 @@
               "blocks": [
                 {
                   "type": "text",
-                  "content": "**Study and preparation**\n\n### Science Olympiad Companion for Students\n\nA student-focused companion for learning about Science Olympiad and preparing for events."
+                  "content": "### Science Olympiad Companion for Students\n\nA student-focused companion for learning about Science Olympiad and preparing for events."
                 },
                 {
                   "type": "button",
@@ -124,7 +124,7 @@
               "blocks": [
                 {
                   "type": "text",
-                  "content": "**Study and preparation**\n\n### Study Event Resources\n\nAdditional materials to help students prepare for study events."
+                  "content": "### Study Event Resources\n\nAdditional materials to help students prepare for study events."
                 },
                 {
                   "type": "button",
@@ -138,7 +138,7 @@
               "blocks": [
                 {
                   "type": "text",
-                  "content": "**Team information**\n\n### Team Code of Conduct\n\nThe Pilgrimage Homeschool Division B and C code of conduct."
+                  "content": "### Team Code of Conduct\n\nThe Pilgrimage Homeschool Division B and C code of conduct."
                 },
                 {
                   "type": "button",
@@ -152,7 +152,7 @@
               "blocks": [
                 {
                   "type": "text",
-                  "content": "**Pilgrimage resource**\n\n### Pilgrimage Study Center\n\nExplore the developing study center for additional guides, practice tests, and event resources."
+                  "content": "### Pilgrimage Study Center\n\nExplore the developing study center for additional guides, practice tests, and event resources."
                 },
                 {
                   "type": "button",

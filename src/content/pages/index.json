@@ -3,7 +3,7 @@
   "description": "A competitive Science Olympiad team for homeschooled students in Maryland.",
   "sections": [
     {
-      "variant": "hero",
+      "variant": "blue",
       "blocks": [
         {
           "type": "text",
@@ -23,7 +23,7 @@
       ]
     },
     {
-      "variant": "default",
+      "variant": "white",
       "blocks": [
         {
           "type": "text",
@@ -32,7 +32,7 @@
       ]
     },
     {
-      "variant": "default",
+      "variant": "white",
       "blocks": [
         {
           "type": "text",
@@ -74,7 +74,7 @@
       ]
     },
     {
-      "variant": "emphasized",
+      "variant": "gold",
       "blocks": [
         {
           "type": "text",
