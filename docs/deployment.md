@@ -51,20 +51,17 @@ Content changes commit through TinaCloud to Git.
 If `/admin/` showed a 404 before, `[slug].astro` was treating `admin` as a page
 slug. The explicit `src/pages/admin/index.astro` route fixes that.
 
-## Wrangler
+## Wrangler-generated files
 
-[`wrangler.jsonc`](../wrangler.jsonc) sets `nodejs_compat` and project name.
-Astro’s Cloudflare adapter merges in Worker entry and assets paths when you run
-`astro build` (output under `dist/`). Do not point `main` at `./dist/...` in
-the root config before a build exists, or local builds can fail.
+This Pages Git deployment does not need a root Wrangler configuration file.
+Astro’s Cloudflare adapter generates the deployment configuration inside
+`dist/server` during the build. If you later switch to a direct Wrangler
+deployment, add a purpose-built config at that time.
 
-Git-connected Pages deploys use the **build output** (`dist`). Wrangler is
-optional for manual `wrangler deploy` workflows.
-
-**Do not commit `.wrangler/`**. Astro/Wrangler creates `.wrangler/deploy/config.json`
-locally after `astro dev` or `astro build`. That file often contains Windows-style
-paths to `dist/server/wrangler.json`. If it is in git, Cloudflare’s build can fail
-*before* `npm run build` with:
+**Do not commit `.wrangler/`**. Astro/Wrangler may create
+`.wrangler/deploy/config.json` locally after `astro dev` or `astro build`. That
+file often contains Windows-style paths to `dist/server/wrangler.json`. If it
+is in git, Cloudflare’s build can fail *before* `npm run build` with:
 
 `redirected configuration path ... dist\server\wrangler.json does not exist`
 
@@ -75,8 +72,9 @@ and redeploy.
 
 | Symptom | Likely cause | Fix |
 | -------- | ------------- | ----- |
-| Wrangler redirect / `dist\server\wrangler.json` missing | Committed `.wrangler/deploy/config.json` | Delete from repo; keep `.wrangler/` gitignored |
-| `Missing clientId, token` during `tinacms build` | Tina env vars not set on Pages | Add `NEXT_PUBLIC_TINA_CLIENT_ID` and `TINA_TOKEN` |
+| Wrangler redirect / `dist\server\wrangler.json` missing | Committed `.wrangler/deploy/config.json` | Delete it; keep `.wrangler/` gitignored |
+| `Missing clientId` during `tinacms build` | Client ID unavailable during the build | Add `NEXT_PUBLIC_TINA_CLIENT_ID` to Pages environment variables |
+| `Missing token` during `tinacms build` | Token unavailable during the build | Add encrypted `TINA_TOKEN` to Pages environment variables |
 | Build succeeds but site 404s | Wrong output directory | Set build output to `dist` (not `dist/client` alone) |
 
 ## Verify before publish
