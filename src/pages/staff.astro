@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Card from "../components/Card.astro";
 
 const coaches = [
   {
@@ -64,10 +65,10 @@ const boardMembers = [
 
   <section class="page-section staff-section">
     <h2>Coaching Staff</h2>
-    <div class="staff-grid">
+    <div class="card-grid staff-grid">
       {
         coaches.map((coach) => (
-          <article class="staff-card">
+          <Card variant="staff">
             {
               coach.image ? (
                 <img class="staff-photo" src={coach.image} alt={`${coach.name} portrait`} />
@@ -86,7 +87,7 @@ const boardMembers = [
             <p class="staff-role">{coach.role}</p>
             <p class="staff-years">{coach.years}</p>
             {coach.history && <p class="staff-history">{coach.history}</p>}
-          </article>
+          </Card>
         ))
       }
     </div>

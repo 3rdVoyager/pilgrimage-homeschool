@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Button from "../components/Button.astro";
+import Card from "../components/Card.astro";
 import ContentSection from "../components/ContentSection.astro";
 ---
 
@@ -35,27 +36,27 @@ import ContentSection from "../components/ContentSection.astro";
       tests of their knowledge in many different scientific areas. There are
       three types of events:
     </p>
-<div class="event-grid">
-  <article class="info-card">
+<div class="card-grid" style="--grid-min-width: 15rem;">
+  <Card variant="info">
     <h3>Study Events</h3>
     <p>
       Composed of a subject test (e.g., Meteorology).
     </p>
-  </article>
+  </Card>
 
-  <article class="info-card">
+  <Card variant="info">
     <h3>Build Events</h3>
     <p>
       Require students to create a scientific device (e.g., Tower).
     </p>
-  </article>
+  </Card>
 
-  <article class="info-card">
+  <Card variant="info">
     <h3>Lab Events</h3>
     <p>
       Consist of a test and hands-on analysis portion (e.g., Forensics).
     </p>
-  </article>
+  </Card>
 </div>
 </section>
 

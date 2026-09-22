@@ -1,0 +1,7 @@
+---
+const { variant = "default" } = Astro.props;
+---
+
+<article class:list={["card", `card-${variant}`]}>
+  <slot />
+</article>

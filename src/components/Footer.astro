@@ -20,15 +20,14 @@ const footerColumns: FooterColumn[] = [
   },
   {
     title: "More Information",
-    links: [
-      { label: "Join the Team" },
-      { label: "Resources" },
-      { label: "Activities" },
-    ],
+    links: [{ label: "Resources", href: "/resources/" }],
   },
   {
     title: "Connect",
-    links: [{ label: "Contact Us", href: "/contact/" }],
+    links: [
+      { label: "Contact Us", href: "/contact/" },
+      { label: "Join the Team" },
+    ],
   },
 ];
 ---
@@ -44,29 +43,28 @@ const footerColumns: FooterColumn[] = [
         <span>Pilgrimage Homeschool</span>
       </a>
       <p>
-        A competitive homeschool Science Olympiad Team for students in grades 3-12.
+        A competitive homeschool Science Olympiad Team for students in grades
+        3-12.
       </p>
     </div>
 
     <div class="footer-columns">
-      {
-        footerColumns.map((column) => (
-          <div class="footer-column">
-            <h2>{column.title}</h2>
-            <ul>
-              {column.links.map((link) => (
-                <li>
-                  {link.href ? (
-                    <a href={link.href!}>{link.label}</a>
-                  ) : (
-                    <span class="footer-link-placeholder">{link.label}</span>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))
-      }
+      {footerColumns.map((column) => (
+        <div class="footer-column">
+          <h2>{column.title}</h2>
+          <ul>
+            {column.links.map((link) => (
+              <li>
+                {link.href ? (
+                  <a href={link.href!}>{link.label}</a>
+                ) : (
+                  <span class="footer-link-placeholder">{link.label}</span>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
     </div>
   </div>
 
