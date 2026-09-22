@@ -1,0 +1,83 @@
+{
+  "page": {
+    "title": "Example Page | Pilgrimage Homeschool",
+    "description": "An example of the reusable content schema.",
+    "sections": [
+      {
+        // Section variants control background and overall visual treatment.
+        // Available values: "default", "hero", "emphasized"
+        "variant": "hero",
+        "blocks": [
+          {
+            // Text supports Markdown headings, paragraphs, bold, italic, links, and lists.
+            "type": "text",
+            "content": "# Welcome to Pilgrimage\n\nStudents learn science through competition, teamwork, and hands-on experience."
+          },
+          {
+            "type": "button",
+            "content": "Learn more about us",
+            "href": "/about",
+            // Available button variants: "primary", "secondary"
+            "variant": "primary"
+          }
+        ]
+      },
+      {
+        "variant": "default",
+        "blocks": [
+          {
+            "type": "text",
+            "content": "## A flexible content section\n\nText blocks can use **bold text**, *italic text*, and [links](/contact) through Markdown."
+          },
+          {
+            "type": "image",
+            "content": "/uploads/example-team.jpg",
+            "alt": "Pilgrimage Homeschool students working together"
+          }
+        ]
+      },
+      {
+        "variant": "emphasized",
+        "blocks": [
+          {
+            "type": "text",
+            "content": "## Explore Science Olympiad\n\nChoose an area to learn more about the ways students can participate."
+          },
+          {
+            "type": "card-grid",
+            // Grid presets control the minimum width of each card.
+            // Available values: "compact", "standard", "wide"
+            "grid": "standard",
+            "cards": [
+              {
+                // Cards use the same variants as sections.
+                "variant": "default",
+                "blocks": [
+                  {
+                    "type": "text",
+                    "content": "### Study events\n\nExplore events that focus on research, identification, and scientific knowledge."
+                  }
+                ]
+              },
+              {
+                "variant": "emphasized",
+                "blocks": [
+                  {
+                    "type": "text",
+                    "content": "### Build events\n\nDesign, build, and test devices while developing engineering skills."
+                  },
+                  {
+                    "type": "button",
+                    "content": "View resources",
+                    "href": "/resources",
+                    "variant": "secondary"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
