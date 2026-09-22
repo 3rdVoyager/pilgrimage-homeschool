@@ -159,7 +159,7 @@
     grid-template-columns: minmax(14rem, 1.3fr) 2fr;
     margin: 0 auto;
     max-width: 95vw;
-    padding: clamp(2rem, 5vw, 4rem) 1rem;
+    padding: clamp(1rem, 3vw, 3rem) 1rem;
 }
 
 .footer-brand {
