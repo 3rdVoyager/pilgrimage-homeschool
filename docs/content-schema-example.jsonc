@@ -19,8 +19,9 @@
             "type": "button",
             "label": "Learn more about us",
             "href": "/about",
-            // Available button variants: "primary", "secondary"
-            "variant": "primary"
+            // Available button variants: "burgundy", "gold"
+            "variant": "burgundy",
+            "external": false
           }
         ]
       },
@@ -54,9 +55,8 @@
             "grid": "standard",
             "cards": [
               {
-                // Card variants are separate from section colors.
-                // The default card style is currently supported.
-                "variant": "default",
+                // Card variants use the same color options as sections.
+                "variant": "white",
                 "blocks": [
                   {
                     "type": "text",
@@ -65,7 +65,7 @@
                 ]
               },
               {
-                "variant": "default",
+                "variant": "white",
                 "blocks": [
                   {
                     "type": "text",
@@ -75,7 +75,8 @@
                     "type": "button",
                     "label": "View resources",
                     "href": "/resources",
-                    "variant": "secondary"
+                    "variant": "gold",
+                    "external": false
                   }
                 ]
               }

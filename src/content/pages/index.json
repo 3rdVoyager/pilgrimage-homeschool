@@ -14,14 +14,14 @@
           "type": "button",
           "label": "Learn About Us",
           "href": "/about/",
-          "variant": "primary",
+          "variant": "burgundy",
           "external": false
         },
         {
           "type": "button",
           "label": "Contact Us",
           "href": "/contact/",
-          "variant": "secondary",
+          "variant": "gold",
           "external": false
         }
       ]
@@ -49,7 +49,7 @@
           "grid": "standard",
           "cards": [
             {
-              "variant": "default",
+              "variant": "white",
               "blocks": [
                 {
                   "type": "text",
@@ -58,7 +58,7 @@
               ]
             },
             {
-              "variant": "default",
+              "variant": "white",
               "blocks": [
                 {
                   "type": "text",
@@ -67,7 +67,7 @@
               ]
             },
             {
-              "variant": "default",
+              "variant": "white",
               "blocks": [
                 {
                   "type": "text",

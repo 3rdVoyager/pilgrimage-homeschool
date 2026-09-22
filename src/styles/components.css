@@ -68,6 +68,23 @@
     padding: 1.5rem;
 }
 
+.card-blue {
+    background-color: var(--color-slate-light);
+}
+
+.card-gold {
+    background-color: var(--color-gold-light);
+    border-color: var(--color-gold);
+}
+
+.card-white {
+    background-color: var(--color-card-bg);
+}
+
+.card-burgundy-light {
+    background-color: var(--color-burgundy-light);
+}
+
 .card .content-markdown {
     gap: 0.5rem;
 }
@@ -230,20 +247,20 @@
     transition: background-color 0.15s ease, color 0.15s ease;
 }
 
-.button-primary {
+.button-burgundy {
     background-color: var(--color-burgundy);
     color: var(--color-text-light);
 }
 
-.button-primary:hover {
+.button-burgundy:hover {
     background-color: var(--color-burgundy-dark);
 }
 
-.button-secondary {
+.button-gold {
     background-color: var(--color-gold);
     color: var(--color-text);
 }
 
-.button-secondary:hover {
+.button-gold:hover {
     background-color: var(--color-gold-light);
 }

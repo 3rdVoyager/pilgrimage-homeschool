@@ -44,7 +44,7 @@ const createButtonBlockTemplate = (): Template => ({
       name: "variant",
       label: "Button style",
       required: true,
-      options: ["primary", "secondary"],
+      options: ["burgundy", "gold"],
     },
     {
       type: "boolean",
@@ -78,7 +78,7 @@ const createCardGridTemplate = (): Template => ({
           name: "variant",
           label: "Card style",
           required: true,
-          options: ["default", "emphasized"],
+          options: ["blue", "gold", "white", "burgundy-light"],
         },
         {
           type: "object",

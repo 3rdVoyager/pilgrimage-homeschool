@@ -2,11 +2,11 @@ import type { TinaRichTextContent } from "@tinacms/astro/types";
 
 export type SectionVariant = "blue" | "gold" | "white" | "burgundy-light";
 
-export type ButtonVariant = "primary" | "secondary";
+export type ButtonVariant = "burgundy" | "gold";
 
 export type GridWidth = "compact" | "standard" | "wide";
 
-export type CardVariant = "default" | "emphasized";
+export type CardVariant = SectionVariant;
 
 export type TextBlock = {
   type: "text";
