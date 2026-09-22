@@ -1,12 +1,13 @@
 import { defineConfig } from 'astro/config';
-import node from '@astrojs/node';
+import cloudflare from '@astrojs/cloudflare';
 import tina from '@tinacms/astro/integration';
 import { tinaAdminDevRedirect } from '@tinacms/astro/vite';
 
-// https://astro.build/config
+// Same Cloudflare adapter locally and in production (Cloudflare Pages).
+// https://docs.astro.build/en/guides/integrations-guide/cloudflare/
 export default defineConfig({
   output: 'server',
-  adapter: node({ mode: 'standalone' }),
+  adapter: cloudflare(),
   integrations: [tina()],
   vite: {
     plugins: [tinaAdminDevRedirect()],
