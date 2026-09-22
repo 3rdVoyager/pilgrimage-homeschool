@@ -1,4 +1,6 @@
-export type SectionVariant = "default" | "hero" | "emphasized";
+import type { TinaRichTextContent } from "@tinacms/astro/types";
+
+export type SectionVariant = "blue" | "gold" | "white" | "burgundy-light";
 
 export type ButtonVariant = "primary" | "secondary";
 
@@ -8,7 +10,7 @@ export type CardVariant = "default" | "emphasized";
 
 export type TextBlock = {
   type: "text";
-  content: string;
+  content: string | TinaRichTextContent;
 };
 
 export type ImageBlock = {
@@ -43,6 +45,7 @@ export type ContentBlock =
   | CardGridBlock;
 
 export type ContentSection = {
+  title?: string;
   variant?: SectionVariant;
   blocks: ContentBlock[];
 };

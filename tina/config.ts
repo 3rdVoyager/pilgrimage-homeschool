@@ -31,54 +31,96 @@ export default defineConfig({
       publicFolder: "public",
     },
   },
-  // See docs on content modeling for more info on how to setup new content models: https://tina.io/docs/r/content-modelling-collections/
+  // Start with About while we connect the real page renderer.
   schema: {
     collections: [
       {
-        name: "post",
-        label: "Posts",
-        path: "content/posts",
+        name: "page",
+        label: "Pages",
+        path: "src/content/pages",
+        format: "json",
+        match: {
+          include: "about",
+        },
         fields: [
           {
             type: "string",
-            name: "eyebrow",
-            label: "Eyebrow",
-          },
-          {
-            type: "string",
             name: "title",
-            label: "Headline",
+            label: "Page title",
             isTitle: true,
             required: true,
           },
           {
-            type: "rich-text",
-            name: "body",
-            label: "Tagline",
-            isBody: true,
+            type: "string",
+            name: "description",
+            label: "Page description",
+            ui: {
+              component: "textarea",
+            },
           },
           {
             type: "object",
-            name: "ctaPrimary",
-            label: "Primary button",
+            name: "sections",
+            label: "Sections",
+            list: true,
+            ui: {
+              itemProps: (item) => {
+                return {
+                  label:
+                    item?.title ||
+                    `${item?.variant || "white"} section`,
+                };
+              },
+            },
             fields: [
-              { type: "string", name: "label", label: "Label" },
-              { type: "string", name: "href", label: "Link" },
-            ],
-          },
-          {
-            type: "object",
-            name: "ctaSecondary",
-            label: "Secondary button",
-            fields: [
-              { type: "string", name: "label", label: "Label" },
-              { type: "string", name: "href", label: "Link" },
+              {
+                type: "string",
+                name: "title",
+                label: "Section title",
+                required: true,
+              },
+              {
+                type: "string",
+                name: "variant",
+                label: "Section color",
+                options: ["blue", "gold", "white", "burgundy-light"],
+              },
+              {
+                type: "object",
+                name: "blocks",
+                label: "Content blocks",
+                list: true,
+                templateKey: "type",
+                templates: [
+                  {
+                    name: "text",
+                    label: "Rich text",
+                    fields: [
+                      {
+                        type: "rich-text",
+                        name: "content",
+                        label: "Content",
+                        overrides: {
+                          toolbar: [
+                            "heading",
+                            "bold",
+                            "italic",
+                            "link",
+                            "ul",
+                            "ol",
+                          ],
+                          headingLevels: ["h1", "h2", "h3"],
+                        },
+                      },
+                    ],
+                  },
+                ],
+              },
             ],
           },
         ],
         ui: {
-          // Opens the /tinacms-demo page for visual editing. Change or remove to fit your site.
-          router: () => "/tinacms-demo",
+          router: ({ document }) => `/${document._sys.filename}`,
         },
       },
     ],
