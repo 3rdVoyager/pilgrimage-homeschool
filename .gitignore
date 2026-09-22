@@ -1,5 +1,7 @@
 # build output
 dist/
+# Astro / Cloudflare local Wrangler deploy redirect (generated on dev/build; Windows paths break CI)
+.wrangler/
 # generated types
 .astro/
 

@@ -57,6 +57,24 @@ the root config before a build exists, or local builds can fail.
 Git-connected Pages deploys use the **build output** (`dist`). Wrangler is
 optional for manual `wrangler deploy` workflows.
 
+**Do not commit `.wrangler/`**. Astro/Wrangler creates `.wrangler/deploy/config.json`
+locally after `astro dev` or `astro build`. That file often contains Windows-style
+paths to `dist/server/wrangler.json`. If it is in git, Cloudflare’s build can fail
+*before* `npm run build` with:
+
+`redirected configuration path ... dist\server\wrangler.json does not exist`
+
+The repo gitignores `.wrangler/`. If it was committed earlier, remove it from git
+and redeploy.
+
+## Troubleshooting Pages builds
+
+| Symptom | Likely cause | Fix |
+| -------- | ------------- | ----- |
+| Wrangler redirect / `dist\server\wrangler.json` missing | Committed `.wrangler/deploy/config.json` | Delete from repo; keep `.wrangler/` gitignored |
+| `Missing clientId, token` during `tinacms build` | Tina env vars not set on Pages | Add `NEXT_PUBLIC_TINA_CLIENT_ID` and `TINA_TOKEN` |
+| Build succeeds but site 404s | Wrong output directory | Set build output to `dist` (not `dist/client` alone) |
+
 ## Verify before publish
 
 With **no dev server** running on port 9000 (Tina datalayer):
