@@ -1,68 +1,9 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import Button from "../components/Button.astro";
-import Card from "../components/Card.astro";
-import ContentSection from "../components/ContentSection.astro";
+import PageRenderer from "../components/PageRenderer.astro";
+import page from "../content/pages/index.json";
+import type { PageContent } from "../types/content";
+
+const pageContent = page as PageContent;
 ---
 
-<BaseLayout title="Pilgrimage Homeschool Science Olympiad">
-  <section class="page-hero home-hero">
-    <h1>Pilgrimage Homeschool</h1>
-    <p class="hero-lede">
-      A competitive Science Olympiad team for homeschooled students in Maryland.
-    </p>
-
-    <div class="button-group">
-      <Button href="/about/" label="Learn About Us" />
-      <Button href="/contact/" label="Contact Us" variant="secondary" />
-    </div>
-  </section>
-
-  <ContentSection title="About Us">
-    <p>
-      Pilgrimage Homeschool Science Olympiad Team is the only non
-      school-affiliated team of over 70 schools competing in Maryland.
-      Pilgrimage has been highly competitive since 2010, coming 1st in the state
-      of Maryland four times to represent Maryland at the national tournament.
-      Our Division B or Middle School team has never placed under the top 5 of
-      30 in the state tournament.
-    </p>
-  </ContentSection>
-
-  <section class="page-section">
-    <h2>About Science Olympiad</h2>
-    <p>
-      In Science Olympiad, students compete in events, which are essentially
-      tests of their knowledge in many different scientific areas. There are
-      three types of events:
-    </p>
-<div class="card-grid" style="--grid-min-width: 15rem;">
-  <Card variant="info">
-    <h3>Study Events</h3>
-    <p>
-      Composed of a subject test (e.g., Meteorology).
-    </p>
-  </Card>
-
-  <Card variant="info">
-    <h3>Build Events</h3>
-    <p>
-      Require students to create a scientific device (e.g., Tower).
-    </p>
-  </Card>
-
-  <Card variant="info">
-    <h3>Lab Events</h3>
-    <p>
-      Consist of a test and hands-on analysis portion (e.g., Forensics).
-    </p>
-  </Card>
-</div>
-</section>
-
-  <ContentSection title="Past Successes" variant="emphasized">
-    <p>
-      In April 2024, Pilgrimage Homeschool competed at the Maryland State Tournament for Divisions A, B & C, also known as Elementary, Middle and High School. Pilgrimage's elementary school team rose from 2nd place in 2023 to 1st place in 2024! Our middle school team earned the 4th place spot in the state!  
-    </p>
-  </ContentSection>
-</BaseLayout>
+<PageRenderer page={pageContent} slug="index" />

@@ -1,0 +1,170 @@
+{
+  "title": "Resources | Pilgrimage Homeschool",
+  "description": "Starting points and study materials for families learning about Science Olympiad.",
+  "sections": [
+    {
+      "variant": "hero",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "# Resources\n\nStarting points and study materials for families learning about Science Olympiad."
+        }
+      ]
+    },
+    {
+      "variant": "default",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "## Science Olympiad resources\n\nExplore these materials to learn about the competition, prepare for events, and understand what it means to be part of the Pilgrimage team."
+        },
+        {
+          "type": "card-grid",
+          "grid": "wide",
+          "cards": [
+            {
+              "blocks": [
+                {
+                  "type": "text",
+                  "content": "**Getting started**\n\n### Benefits of Science Olympiad\n\nAn introduction to the opportunities and benefits of participating in Science Olympiad."
+                },
+                {
+                  "type": "button",
+                  "content": "Visit resource",
+                  "href": "https://drive.google.com/file/d/10zO-7GfzKbILcVrCv_DdBW95TY_Azywb/view?usp=drive_link",
+                  "external": true
+                }
+              ]
+            },
+            {
+              "blocks": [
+                {
+                  "type": "text",
+                  "content": "**Getting started**\n\n### Types of Events\n\nLearn how study, build, and laboratory events give students different ways to explore science."
+                },
+                {
+                  "type": "button",
+                  "content": "Visit resource",
+                  "href": "https://drive.google.com/open?id=10dLcHvW_POvParv6cjmmaiRft3xAGoun&usp=drive_copy",
+                  "external": true
+                }
+              ]
+            },
+            {
+              "blocks": [
+                {
+                  "type": "text",
+                  "content": "**Getting started**\n\n### Typical Season\n\nAn overview of what students and families can expect throughout a Science Olympiad season."
+                },
+                {
+                  "type": "button",
+                  "content": "Visit resource",
+                  "href": "https://drive.google.com/open?id=10juSPKzjziNYL1sujXyJ8A_cS9dhLZrh&usp=drive_copy",
+                  "external": true
+                }
+              ]
+            },
+            {
+              "blocks": [
+                {
+                  "type": "text",
+                  "content": "**Getting started**\n\n### What Is Science Olympiad?\n\nAn article explaining the competition and what students can expect from Science Olympiad."
+                },
+                {
+                  "type": "button",
+                  "content": "Visit resource",
+                  "href": "https://drive.google.com/open?id=1zLPMbITxz-WeAfeBmo3_3NWesQ1XkwBB&usp=drive_copy",
+                  "external": true
+                }
+              ]
+            },
+            {
+              "blocks": [
+                {
+                  "type": "text",
+                  "content": "**Study and preparation**\n\n### Locations to Find Tests\n\nA guide to finding practice tests and other materials for event preparation."
+                },
+                {
+                  "type": "button",
+                  "content": "Visit resource",
+                  "href": "https://drive.google.com/open?id=1JBdPNjAbY_Y0SJ8vWhj4xk7keKXK9X54&usp=drive_copy",
+                  "external": true
+                }
+              ]
+            },
+            {
+              "blocks": [
+                {
+                  "type": "text",
+                  "content": "**Team information**\n\n### Team Expectations\n\nExpectations for Pilgrimage Homeschool students and families during the 2026 season."
+                },
+                {
+                  "type": "button",
+                  "content": "Visit resource",
+                  "href": "https://drive.google.com/open?id=16zQ40Hb9CtiUEHltu39m8es5-Fnz3W-f&usp=drive_copy",
+                  "external": true
+                }
+              ]
+            },
+            {
+              "blocks": [
+                {
+                  "type": "text",
+                  "content": "**Study and preparation**\n\n### Science Olympiad Companion for Students\n\nA student-focused companion for learning about Science Olympiad and preparing for events."
+                },
+                {
+                  "type": "button",
+                  "content": "Visit resource",
+                  "href": "https://drive.google.com/open?id=1acHjsBoNsRmxcVIy4Q1uxLC76QEtFYIH&usp=drive_copy",
+                  "external": true
+                }
+              ]
+            },
+            {
+              "blocks": [
+                {
+                  "type": "text",
+                  "content": "**Study and preparation**\n\n### Study Event Resources\n\nAdditional materials to help students prepare for study events."
+                },
+                {
+                  "type": "button",
+                  "content": "Visit resource",
+                  "href": "https://drive.google.com/open?id=1Qn1fgdJJ1d-5IFK58VYUIdVBN7cT53xR&usp=drive_copy",
+                  "external": true
+                }
+              ]
+            },
+            {
+              "blocks": [
+                {
+                  "type": "text",
+                  "content": "**Team information**\n\n### Team Code of Conduct\n\nThe Pilgrimage Homeschool Division B and C code of conduct."
+                },
+                {
+                  "type": "button",
+                  "content": "Visit resource",
+                  "href": "https://drive.google.com/open?id=1mRY-jBfqNNbpTgrNqgeY-1rq2fck6MC4&usp=drive_copy",
+                  "external": true
+                }
+              ]
+            },
+            {
+              "blocks": [
+                {
+                  "type": "text",
+                  "content": "**Pilgrimage resource**\n\n### Pilgrimage Study Center\n\nExplore the developing study center for additional guides, practice tests, and event resources."
+                },
+                {
+                  "type": "button",
+                  "content": "Visit resource",
+                  "href": "https://pilgrimagestudycenter.pages.dev",
+                  "external": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

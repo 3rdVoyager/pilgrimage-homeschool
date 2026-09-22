@@ -1,0 +1,227 @@
+{
+  "title": "Our Staff | Pilgrimage Homeschool",
+  "description": "Meet the coaches, volunteers, and student leaders of Pilgrimage Homeschool Science Olympiad.",
+  "sections": [
+    {
+      "variant": "hero",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "# Our Staff\n\nPilgrimage is led by coaches, volunteers, and student leaders who share a commitment to science, teamwork, and learning."
+        }
+      ]
+    },
+    {
+      "variant": "default",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "## Coaching Staff"
+        },
+        {
+          "type": "card-grid",
+          "grid": "compact",
+          "cards": [
+            {
+              "variant": "default",
+              "blocks": [
+                {
+                  "type": "image",
+                  "content": "/assets/images/Cheryl.jpg",
+                  "alt": "Mrs Cheryl Booth portrait"
+                },
+                {
+                  "type": "text",
+                  "content": "### Mrs Cheryl Booth\n\n**Head Coach, Divisions A, B & C**\n\n2021–present\n\n*Former Assistant Coach for Division B, 2020–2021*"
+                }
+              ]
+            },
+            {
+              "variant": "default",
+              "blocks": [
+                {
+                  "type": "image",
+                  "content": "/assets/images/Peter.jpg",
+                  "alt": "Mr Peter Chen portrait"
+                },
+                {
+                  "type": "text",
+                  "content": "### Mr Peter Chen\n\n**Assistant Coach**\n\n2025–present\n\n*Junior Assistant Coach, 2022–2025; PH Team Member, 2018–2022*"
+                }
+              ]
+            },
+            {
+              "variant": "default",
+              "blocks": [
+                {
+                  "type": "image",
+                  "content": "/assets/images/Maria.jpg",
+                  "alt": "Mrs Maria Kinsinger portrait"
+                },
+                {
+                  "type": "text",
+                  "content": "### Mrs Maria Kinsinger\n\n**Former Assistant Coach**\n\n2023–2026\n\n*Former Division B Head Coach, 2017–2021*"
+                }
+              ]
+            },
+            {
+              "variant": "default",
+              "blocks": [
+                {
+                  "type": "image",
+                  "content": "/assets/images/West.jpg",
+                  "alt": "Mr West Coile portrait"
+                },
+                {
+                  "type": "text",
+                  "content": "### Mr West Coile\n\n**Founder & Former Head Coach**\n\n2010–2019"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "default",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "## Officers"
+        },
+        {
+          "type": "card-grid",
+          "grid": "compact",
+          "cards": [
+            {
+              "blocks": [
+                {
+                  "type": "text",
+                  "content": "**Team Manager**\n\nMrs Olivia Hsu-Cheng"
+                }
+              ]
+            },
+            {
+              "blocks": [
+                {
+                  "type": "text",
+                  "content": "**Team Treasurer**\n\nMrs Theresa Chen"
+                }
+              ]
+            },
+            {
+              "blocks": [
+                {
+                  "type": "text",
+                  "content": "**Assistant Team Manager**\n\nMrs Theresa Chen"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "default",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "## Student Assistants"
+        },
+        {
+          "type": "card-grid",
+          "grid": "compact",
+          "cards": [
+            {
+              "blocks": [
+                {
+                  "type": "text",
+                  "content": "**Junior Assistant Coach, Division B**\n\nJoshie Cheng"
+                }
+              ]
+            },
+            {
+              "blocks": [
+                {
+                  "type": "text",
+                  "content": "**Junior Assistant Coach, Division C**\n\nJohn Chu"
+                }
+              ]
+            },
+            {
+              "blocks": [
+                {
+                  "type": "text",
+                  "content": "**Team Mentor, Division B**\n\nJohn Chu"
+                }
+              ]
+            },
+            {
+              "blocks": [
+                {
+                  "type": "text",
+                  "content": "**Technology Coordinator**\n\nJoshie Cheng"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "variant": "default",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "## Board of Directors"
+        },
+        {
+          "type": "card-grid",
+          "grid": "standard",
+          "cards": [
+            {
+              "blocks": [
+                {
+                  "type": "text",
+                  "content": "Mrs Cheryl Booth"
+                }
+              ]
+            },
+            {
+              "blocks": [
+                {
+                  "type": "text",
+                  "content": "Mrs Maria Kinsinger"
+                }
+              ]
+            },
+            {
+              "blocks": [
+                {
+                  "type": "text",
+                  "content": "Mrs Theresa Chen"
+                }
+              ]
+            },
+            {
+              "blocks": [
+                {
+                  "type": "text",
+                  "content": "Mrs Olivia Hsu-Cheng"
+                }
+              ]
+            },
+            {
+              "blocks": [
+                {
+                  "type": "text",
+                  "content": "Mrs Betty Simon-Ogan"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

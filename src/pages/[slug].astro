@@ -1,0 +1,27 @@
+---
+import PageRenderer from "../components/PageRenderer.astro";
+import type { PageContent } from "../types/content";
+
+export function getStaticPaths() {
+  const pages = import.meta.glob("../content/pages/*.json", {
+    eager: true,
+    import: "default",
+  }) as Record<string, PageContent>;
+
+  return Object.entries(pages)
+    .filter(([path]) => !path.endsWith("/index.json"))
+    .map(([path, page]) => {
+      const fileName = path.split("/").pop() ?? "";
+      const slug = fileName.replace(/\.json$/, "");
+
+      return {
+        params: { slug },
+        props: { page, slug },
+      };
+    });
+}
+
+const { page, slug } = Astro.props;
+---
+
+<PageRenderer page={page} slug={slug} />

@@ -1,0 +1,43 @@
+---
+import { marked } from "marked";
+import Button from "./Button.astro";
+import CardGrid from "./CardGrid.astro";
+import type { ContentBlock } from "../types/content";
+
+interface Props {
+  blocks: ContentBlock[];
+}
+
+const { blocks } = Astro.props;
+---
+
+{
+  blocks.map((block) => {
+    if (block.type === "text") {
+      return (
+        <div class="content-markdown" set:html={marked.parse(block.content)} />
+      );
+    }
+
+    if (block.type === "image") {
+      return (
+        <img class="content-image" src={block.content} alt={block.alt} />
+      );
+    }
+
+    if (block.type === "button") {
+      return (
+        <div class="content-button">
+          <Button
+            href={block.href}
+            label={block.content}
+            variant={block.variant}
+            external={block.external}
+          />
+        </div>
+      );
+    }
+
+    return <CardGrid block={block} />;
+  })
+}
