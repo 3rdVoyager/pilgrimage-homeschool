@@ -1,6 +1,5 @@
 ---
 import { marked } from "marked";
-import TinaMarkdown from "@tinacms/astro/TinaMarkdown.astro";
 import Button from "./Button.astro";
 import CardGrid from "./CardGrid.astro";
 import type { ContentBlock } from "../types/content";
@@ -15,13 +14,7 @@ const { blocks } = Astro.props;
 {
   blocks.map((block) => {
     if (block.type === "text") {
-      return typeof block.content === "string" ? (
-        <div class="content-markdown" set:html={marked.parse(block.content)} />
-      ) : (
-        <div class="content-markdown">
-          <TinaMarkdown content={block.content} />
-        </div>
-      );
+      return <div class="content-markdown" set:html={marked.parse(block.content)} />;
     }
 
     if (block.type === "image") {

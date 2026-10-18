@@ -1,17 +1,12 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import { getSiteSettings } from "../lib/tina/data";
+import { getSiteSettings } from "../lib/content";
 import type { SiteSettings } from "../types/content";
 import "../styles/main.css";
 
 const { title, description = "Pilgrimage Homeschool Science Olympiad" } = Astro.props;
-const siteResult = await getSiteSettings();
-const site = siteResult.data?.site as SiteSettings | undefined;
-
-if (!site) {
-  throw new Error("Site settings could not be loaded.");
-}
+const site = getSiteSettings() as SiteSettings;
 ---
 
 <html lang="en">

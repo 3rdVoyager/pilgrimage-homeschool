@@ -1,25 +1,20 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import TinaIsland from "@tinacms/astro/TinaIsland.astro";
 import PageSections from "../components/PageSections.astro";
-import { getPage } from "../lib/tina/data";
-import { islands } from "../lib/tina/islands";
+import { getPage, getPageSlugs } from "../lib/content";
 import type { PageContent } from "../types/content";
 
-const slug = Astro.params.slug ?? "";
-const pageFiles = import.meta.glob("../content/pages/*.json");
-
-// Reserved for Tina CMS static admin (public/admin/index.html).
-if (slug === "admin") {
-  return Astro.redirect("/admin/index.html");
+export function getStaticPaths() {
+  return getPageSlugs().map((slug) => ({ params: { slug } }));
 }
 
-if (!pageFiles[`../content/pages/${slug}.json`]) {
+const slug = Astro.params.slug ?? "";
+
+if (slug === "admin") {
   return new Response("Not Found", { status: 404 });
 }
 
-const result = await getPage(slug);
-const page = result.data?.page as PageContent | undefined;
+const page = getPage(slug) as PageContent | undefined;
 
 if (!page) {
   return new Response("Not Found", { status: 404 });
@@ -27,11 +22,5 @@ if (!page) {
 ---
 
 <BaseLayout title={page.title} description={page.description}>
-  <TinaIsland
-    name="page"
-    wrapper={islands.page.wrapper}
-    params={{ slug }}
-  >
-    <PageSections page={page} />
-  </TinaIsland>
+  <PageSections page={page} />
 </BaseLayout>
