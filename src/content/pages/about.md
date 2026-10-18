@@ -1,0 +1,32 @@
+---
+title: About | Pilgrimage Homeschool
+description: Learn more about the Pilgrimage Homeschool Science Olympiad team.
+sections:
+  - layout: default
+    id: about-us
+    color: blue
+    content: |
+      # About Us
+      
+      Learn more about the Pilgrimage Homeschool Science Olympiad team.
+  - layout: default
+    id: what-is-science-olympiad
+    color: white
+    content: |
+      ## What is Science Olympiad?
+      
+      Science Olympiad is a competition for elementary, middle, and high school students that focuses on many different aspects of science and technology. Teams of up to 15 students compete in pairs of two or three, to complete tests, build gadgets, and try to get the top score in their event. There are 23 different events and a total team score is calculated from the team scores in the 23 events.
+      
+      The top 14 teams at a regional tournament move on to the state finals, and from there, one team will emerge state champion. The state champion moves on to compete at the national tournament. What makes Science Olympiad so fun is that you can do anything from building a working glider plane, to cracking toxicology cases in â€œCrime Busters," to looking at natural history in â€œFossils!â€"
+  - layout: default
+    id: our-history
+    color: white
+    content: |
+      ## Our History
+      
+      The Pilgrimage Homeschool Science Olympiad team was established in 2010 as a middle school (Division B) team and has been one of the highest-performing teams in the state, competing continuously for the last 16 seasons.
+      
+      Though our team has never had formal funding or corporate sponsors, we have won #1 in the state four of twelve times (Division B in 2014, 15, & 17, and Division C in 2015), competing for Maryland at nationals. Since then, Pilgrimage Div B has won every season in the top 5 at the state tournament.
+      
+      Maryland's high school team was established in 2013 and has competed in eight seasons since. In 2023, Pilgrimage Homeschool expanded to include an elementary school (Division A) team. As of the 2023 season, homeschoolers in grades 3 - 12 are eligible to compete with the team.
+---

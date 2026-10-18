@@ -1,10 +1,9 @@
 ---
+import { getEntry } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PageSections from "../components/PageSections.astro";
-import { getPage } from "../lib/content";
-import type { PageContent } from "../types/content";
 
-const page = getPage("index") as PageContent | undefined;
+const page = (await getEntry("pages", "index"))?.data;
 
 if (!page) {
   return new Response("Not Found", { status: 404 });

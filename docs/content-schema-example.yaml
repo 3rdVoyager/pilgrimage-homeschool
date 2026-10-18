@@ -1,0 +1,19 @@
+title: Example Page | Pilgrimage Homeschool
+description: An example of the reusable page content schema.
+sections:
+  - layout: default
+    id: welcome
+    color: blue
+    content: |
+      # Welcome to Pilgrimage
+
+      Students learn science through competition, teamwork, and hands-on experience.
+
+      [Learn more](/about/)
+  - layout: default
+    id: explore-science-olympiad
+    color: gold
+    content: |
+      ## Explore Science Olympiad
+
+      Choose an area to learn more about the ways students can participate.

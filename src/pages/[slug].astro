@@ -1,11 +1,14 @@
 ---
+import { getCollection, getEntry } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PageSections from "../components/PageSections.astro";
-import { getPage, getPageSlugs } from "../lib/content";
-import type { PageContent } from "../types/content";
 
-export function getStaticPaths() {
-  return getPageSlugs().map((slug) => ({ params: { slug } }));
+export async function getStaticPaths() {
+  const pages = await getCollection("pages");
+
+  return pages
+    .filter((page) => page.id !== "index")
+    .map((page) => ({ params: { slug: page.id } }));
 }
 
 const slug = Astro.params.slug ?? "";
@@ -14,7 +17,7 @@ if (slug === "admin") {
   return new Response("Not Found", { status: 404 });
 }
 
-const page = getPage(slug) as PageContent | undefined;
+const page = (await getEntry("pages", slug))?.data;
 
 if (!page) {
   return new Response("Not Found", { status: 404 });
