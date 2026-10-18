@@ -13,10 +13,6 @@ export async function getStaticPaths() {
 
 const slug = Astro.params.slug ?? "";
 
-if (slug === "admin") {
-  return new Response("Not Found", { status: 404 });
-}
-
 const page = (await getEntry("pages", slug))?.data;
 
 if (!page) {

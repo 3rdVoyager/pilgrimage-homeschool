@@ -1,6 +1,7 @@
 ---
 import DropdownMenu from "./DropdownMenu.astro";
 import type { SiteSettings } from "../types/content";
+import "../styles/header.css";
 
 type Props = SiteSettings["header"];
 const { siteName, logoAlt, navItems } = Astro.props as Props;
