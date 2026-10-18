@@ -9,17 +9,51 @@ const sectionVariant = z.enum([
   "burgundy-light",
 ]);
 
+const sectionBase = {
+  id: z.string(),
+  color: sectionVariant,
+};
+
+const card = z.object({
+  content: z.string(),
+});
+
+const pageSection = z.discriminatedUnion("layout", [
+  z.object({
+    ...sectionBase,
+    layout: z.literal("vertical"),
+    content: z.string(),
+  }),
+  z.object({
+    ...sectionBase,
+    layout: z.literal("2-column-grid"),
+    cards: z.array(card),
+    content: z.string().optional(),
+  }),
+  z.object({
+    ...sectionBase,
+    layout: z.literal("3-column-grid"),
+    cards: z.array(card),
+    content: z.string().optional(),
+  }),
+  z.object({
+    ...sectionBase,
+    layout: z.literal("4-column-grid"),
+    cards: z.array(card),
+    content: z.string().optional(),
+  }),
+  z.object({
+    ...sectionBase,
+    layout: z.literal("automatic-grid"),
+    cards: z.array(card),
+    content: z.string().optional(),
+  }),
+]);
+
 const pageSchema = z.object({
   title: z.string(),
   description: z.string(),
-  sections: z.array(
-    z.object({
-      layout: z.enum(["default"]).default("default"),
-      id: z.string(),
-      color: sectionVariant,
-      content: z.string(),
-    }),
-  ),
+  sections: z.array(pageSection),
 });
 
 const siteSchema = z.object({
@@ -54,7 +88,6 @@ const siteSchema = z.object({
         ),
       }),
     ),
-    copyright: z.string(),
   }),
 });
 

@@ -2,14 +2,14 @@
 title: Contact | Pilgrimage Homeschool
 description: Contact the Pilgrimage Homeschool Science Olympiad team.
 sections:
-  - layout: default
+  - layout: vertical
     id: contact-us
     color: blue
     content: |
       # Contact Us
       
       Have a question about Pilgrimage Homeschool Science Olympiad? We would be happy to hear from you.
-  - layout: default
+  - layout: vertical
     id: email
     color: white
     content: |

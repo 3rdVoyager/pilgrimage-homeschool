@@ -20,7 +20,18 @@ const { page } = Astro.props;
           `page-section-layout-${section.layout}`,
         ]}
       >
-        <div class="section-content" set:html={marked.parse(section.content)} />
+        {section.content && (
+          <div class="section-content" set:html={marked.parse(section.content)} />
+        )}
+        {section.layout !== "vertical" && (
+          <div class="section-grid">
+            {section.cards.map((card) => (
+              <article class="content-card">
+                <div class="card-content" set:html={marked.parse(card.content)} />
+              </article>
+            ))}
+          </div>
+        )}
       </section>
     );
   })

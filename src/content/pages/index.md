@@ -2,7 +2,7 @@
 title: Pilgrimage Homeschool Science Olympiad
 description: A competitive Science Olympiad team for homeschooled students in Maryland.
 sections:
-  - layout: default
+  - layout: vertical
     id: pilgrimage-homeschool
     color: blue
     content: |
@@ -13,33 +13,34 @@ sections:
       [Learn About Us](/about/)
       
       [Contact Us](/contact/)
-  - layout: default
+  - layout: vertical
     id: about-us
     color: white
     content: |
       ## About Us
       
       Pilgrimage Homeschool Science Olympiad Team is the only non school-affiliated team of over 70 schools competing in Maryland. Pilgrimage has been highly competitive since 2010, coming 1st in the state of Maryland four times to represent Maryland at the national tournament. Our Division B or Middle School team has never placed under the top 5 of 30 in the state tournament.
-  - layout: default
+  - layout: automatic-grid
     id: about-science-olympiad
     color: white
+    cards:
+      - content: |
+          ### Study Events
+          
+          Composed of a subject test, such as Meteorology.
+      - content: |
+          ### Build Events
+          
+          Require students to create a scientific device, such as a Tower.
+      - content: |
+          ### Lab Events
+          
+          Consist of a test and hands-on analysis portion, such as Forensics.
     content: |
       ## About Science Olympiad
       
-      In Science Olympiad, students compete in events, which are essentially tests of their knowledge in many different scientific areas. There are three types of events:
-      
-      ### Study Events
-      
-      Composed of a subject test, such as Meteorology.
-      
-      ### Build Events
-      
-      Require students to create a scientific device, such as a Tower.
-      
-      ### Lab Events
-      
-      Consist of a test and hands-on analysis portion, such as Forensics.
-  - layout: default
+      In Science Olympiad, students compete in events, which are essentially tests of their knowledge in many different scientific areas.
+  - layout: vertical
     id: past-successes
     color: gold
     content: |

@@ -14,6 +14,8 @@ header:
     href: /resources/
   - label: Contact
     href: /contact/
+  - label: Join the Team
+    href: /join/
 footer:
   description: A competitive homeschool Science Olympiad Team for students in grades 3-12.
   columns:
@@ -34,4 +36,4 @@ footer:
     - label: Contact Us
       href: /contact/
     - label: Join the Team
-  copyright: Pilgrimage Homeschool Science Olympiad Team. All rights reserved.
+      href: /join/
