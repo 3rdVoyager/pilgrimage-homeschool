@@ -1,5 +1,5 @@
 ---
-title: Resources | Pilgrimage Homeschool
+title: Resources
 description: Starting points and study materials for families learning about Science Olympiad.
 ---
 

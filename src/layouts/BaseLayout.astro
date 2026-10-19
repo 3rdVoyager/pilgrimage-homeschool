@@ -7,19 +7,21 @@ import "../styles/base.css";
 import "../styles/page.css";
 import "../styles/components.css";
 
-const { title, description = "Pilgrimage Homeschool Science Olympiad" } = Astro.props;
+const { title = "Pilgrimage Homeschool Science Olympiad", description = "Pilgrimage Homeschool Science Olympiad" } = Astro.props;
 const site = (await getEntry("site", "site"))?.data;
 
 if (!site) {
   throw new Error("Site settings could not be loaded.");
 }
+
+const pageTitle = `${title} | ${site.header.siteName}`;
 ---
 
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>{title}</title>
+    <title>{pageTitle}</title>
     <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
     <link rel="shortcut icon" href="/favicon/favicon.ico" />

@@ -1,5 +1,5 @@
 ---
-title: About | Pilgrimage Homeschool
+title: About
 description: Learn more about the Pilgrimage Homeschool Science Olympiad team.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Pilgrimage Homeschool Science Olympiad
+title: Home
 description: A competitive Science Olympiad team for homeschooled students in Maryland.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Contact | Pilgrimage Homeschool
+title: Contact
 description: Contact the Pilgrimage Homeschool Science Olympiad team.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Our Staff | Pilgrimage Homeschool
+title: Our Staff
 description: Meet the coaches, volunteers, and student leaders of Pilgrimage Homeschool Science
 ---
 
