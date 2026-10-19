@@ -1,0 +1,96 @@
+media:
+  - name: images
+    label: Images
+    input: public/assets
+    output: /assets
+    categories: [image]
+    extensions: [jpg, jpeg, png, webp, svg]
+    rename: safe
+
+content:
+  - name: pages
+    label: Pages
+    type: collection
+    path: src/content/pages
+    format: yaml-frontmatter
+    fields:
+      - name: title
+        label: Page title
+        type: string
+        required: true
+      - name: description
+        label: Page description
+        type: text
+        required: true
+      - name: body
+        label: Page content
+        type: rich-text
+        options:
+          format: html
+          media: images
+          path: images
+          switcher: true
+
+  - name: site
+    label: Site settings
+    type: file
+    path: src/content/site.yaml
+    format: yaml
+    fields:
+      - name: header
+        label: Header
+        type: object
+        fields:
+          - name: siteName
+            label: Site name
+            type: string
+            required: true
+          - name: logoAlt
+            label: Logo alt text
+            type: string
+            required: true
+          - name: navItems
+            label: Navigation items
+            type: object
+            list: true
+            fields:
+              - name: label
+                type: string
+                required: true
+              - name: href
+                type: string
+              - name: items
+                label: Dropdown items
+                type: object
+                list: true
+                fields:
+                  - name: label
+                    type: string
+                    required: true
+                  - name: href
+                    type: string
+                    required: true
+      - name: footer
+        label: Footer
+        type: object
+        fields:
+          - name: description
+            type: text
+            required: true
+          - name: columns
+            label: Footer columns
+            type: object
+            list: true
+            fields:
+              - name: title
+                type: string
+                required: true
+              - name: links
+                type: object
+                list: true
+                fields:
+                  - name: label
+                    type: string
+                    required: true
+                  - name: href
+                    type: string
