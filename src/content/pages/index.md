@@ -11,12 +11,12 @@ description: A competitive Science Olympiad team for homeschooled students in Ma
   </div>
 </div>
 
-<div class="page-section home-about">
+<div class="page-section">
   <h2>About Us</h2>
   <p>Pilgrimage Homeschool Science Olympiad Team is the only non school-affiliated team of over 70 schools competing in Maryland. Pilgrimage has been highly competitive since 2010, coming 1st in the state of Maryland four times to represent Maryland at the national tournament. Our Division B or Middle School team has never placed under the top 5 of 30 in the state tournament.</p>
 </div>
 
-<div class="page-section home-science">
+<div class="page-section">
   <h2>About Science Olympiad</h2>
   <p>In Science Olympiad, students compete in events, which are essentially tests of their knowledge in many different scientific areas.</p>
   <div class="card-grid">
@@ -35,7 +35,7 @@ description: A competitive Science Olympiad team for homeschooled students in Ma
   </div>
 </div>
 
-<div class="page-section home-successes">
+<div class="page-section">
   <h2>Past Successes</h2>
   <p>In April 2024, Pilgrimage Homeschool competed at the Maryland State Tournament for Divisions A, B & C, also known as Elementary, Middle and High School. Pilgrimage's elementary school team rose from 2nd place in 2023 to 1st place in 2024! Our middle school team earned the 4th place spot in the state!</p>
 </div>
