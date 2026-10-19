@@ -1,0 +1,69 @@
+.page-content {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.page-content > * {
+    padding: clamp(3rem, 6vw, 6rem);
+}
+
+.page-content > h1 {
+    margin-bottom: 0.75rem;
+}
+
+.page-content > h1 + p {
+    color: var(--color-muted);
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
+    margin-bottom: 3.5rem;
+}
+
+.page-content > h2 {
+    border-top: 1px solid var(--color-border);
+    margin-top: 6rem;
+    padding-top: 5rem;
+}
+
+.page-section {
+    border-top: 2px solid var(--color-border);
+}
+
+.page-section:first-child {
+    border-top: 0;
+}
+
+.page-section h2 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.page-content a {
+    background-color: var(--color-burgundy);
+    border-radius: 6px;
+    color: var(--color-text-light);
+    display: inline-block;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.page-content a:hover {
+    background-color: var(--color-burgundy-dark);
+}
+
+.page-content a:focus-visible {
+    outline: 3px solid var(--color-gold);
+    outline-offset: 3px;
+}
+
+.page-content ul,
+.page-content ol {
+    padding-left: 1.5rem;
+}
+
+.page-content img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
