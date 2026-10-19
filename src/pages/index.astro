@@ -1,15 +1,19 @@
 ---
-import { getEntry } from "astro:content";
+import { getEntry, render } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import PageSections from "../components/PageSections.astro";
+import "../styles/home.css";
 
-const page = (await getEntry("pages", "index"))?.data;
+const page = await getEntry("pages", "index");
 
 if (!page) {
   return new Response("Not Found", { status: 404 });
 }
+
+const { Content } = await render(page);
 ---
 
-<BaseLayout title={page.title} description={page.description}>
-  <PageSections page={page} />
+<BaseLayout title={page.data.title} description={page.data.description}>
+  <article class="page-content homepage">
+    <Content />
+  </article>
 </BaseLayout>

@@ -1,112 +1,106 @@
 ---
 title: Our Staff | Pilgrimage Homeschool
 description: Meet the coaches, volunteers, and student leaders of Pilgrimage Homeschool Science
-sections:
-  - layout: vertical
-    id: our-staff
-    color: blue
-    content: |
-      # Our Staff
-      
-      Pilgrimage is led by coaches, volunteers, and student leaders who share a commitment to science, teamwork, and learning.
-  - layout: automatic-grid
-    id: coaching-staff
-    color: white
-    content: |
-      ## Coaching Staff
-    cards:
-      - content: |
-          ![Mrs Cheryl Booth portrait](/assets/images/Cheryl.jpg)
-          
-          ### Mrs Cheryl Booth
-          
-          **Head Coach, Divisions A, B & C**
-          
-          2021–present
-          
-          *Former Assistant Coach for Division B, 2020–2021*
-      - content: |
-          ![Mr Peter Chen portrait](/assets/images/Peter.jpg)
-          
-          ### Mr Peter Chen
-          
-          **Assistant Coach**
-          
-          2025–present
-          
-          *Junior Assistant Coach, 2022–2025; PH Team Member, 2018–2022*
-      - content: |
-          ![Mrs Maria Kinsinger portrait](/assets/images/Maria.jpg)
-          
-          ### Mrs Maria Kinsinger
-          
-          **Former Assistant Coach**
-          
-          2023–2026
-          
-          *Former Division B Head Coach, 2017–2021*
-      - content: |
-          ![Mr West Coile portrait](/assets/images/West.jpg)
-          
-          ### Mr West Coile
-          
-          **Founder & Former Head Coach**
-          
-          2010–2019
-  - layout: automatic-grid
-    id: officers
-    color: white
-    content: |
-      ## Officers
-    cards:
-      - content: |
-          **Team Manager**
-          
-          Mrs Olivia Hsu-Cheng
-      - content: |
-          **Team Treasurer**
-          
-          Mrs Theresa Chen
-      - content: |
-          **Assistant Team Manager**
-          
-          Mrs Theresa Chen
-  - layout: automatic-grid
-    id: student-assistants
-    color: white
-    content: |
-      ## Student Assistants
-    cards:
-      - content: |
-          **Junior Assistant Coach, Division B**
-          
-          Joshie Cheng
-      - content: |
-          **Junior Assistant Coach, Division C**
-          
-          John Chu
-      - content: |
-          **Team Mentor, Division B**
-          
-          John Chu
-      - content: |
-          **Technology Coordinator**
-          
-          Joshie Cheng
-  - layout: automatic-grid
-    id: board-of-directors
-    color: white
-    content: |
-      ## Board of Directors
-    cards:
-      - content: |
-          Mrs Cheryl Booth
-      - content: |
-          Mrs Maria Kinsinger
-      - content: |
-          Mrs Theresa Chen
-      - content: |
-          Mrs Olivia Hsu-Cheng
-      - content: |
-          Mrs Betty Simon-Ogan
 ---
+
+<div class="page-section">
+  <h1>Our Staff</h1>
+  <p>Pilgrimage is led by coaches, volunteers, and student leaders who share a commitment to science, teamwork, and learning.</p>
+</div>
+
+<div class="page-section">
+  <h2>Coaching Staff</h2>
+  <div class="card-grid">
+  <article class="content-card">
+    <img src="/assets/images/Cheryl.jpg" alt="Mrs Cheryl Booth portrait">
+    <h3>Mrs Cheryl Booth</h3>
+    <p><strong>Head Coach, Divisions A, B &amp; C</strong></p>
+    <p>2021–present</p>
+    <p><em>Former Assistant Coach for Division B, 2020–2021</em></p>
+  </article>
+  <article class="content-card">
+    <img src="/assets/images/Peter.jpg" alt="Mr Peter Chen portrait">
+    <h3>Mr Peter Chen</h3>
+    <p><strong>Assistant Coach</strong></p>
+    <p>2025–present</p>
+    <p><em>Junior Assistant Coach, 2022–2025; PH Team Member, 2018–2022</em></p>
+  </article>
+  <article class="content-card">
+    <img src="/assets/images/Maria.jpg" alt="Mrs Maria Kinsinger portrait">
+    <h3>Mrs Maria Kinsinger</h3>
+    <p><strong>Former Assistant Coach</strong></p>
+    <p>2023–2026</p>
+    <p><em>Former Division B Head Coach, 2017–2021</em></p>
+  </article>
+  <article class="content-card">
+    <img src="/assets/images/West.jpg" alt="Mr West Coile portrait">
+    <h3>Mr West Coile</h3>
+    <p><strong>Founder &amp; Former Head Coach</strong></p>
+    <p>2010–2019</p>
+  </article>
+  </div>
+</div>
+
+<div class="page-section">
+  <h2>Officers</h2>
+  <div class="card-grid">
+  <article class="content-card">
+    <p><strong>Team Manager</strong></p>
+    <p>Mrs Olivia Hsu-Cheng</p>
+  </article>
+  <article class="content-card">
+    <p><strong>Team Treasurer</strong></p>
+    <p>Mrs Theresa Chen</p>
+  </article>
+  <article class="content-card">
+    <p><strong>Assistant Team Manager</strong></p>
+    <p>Mrs Theresa Chen</p>
+  </article>
+  </div>
+</div>
+
+<div class="page-section">
+  <h2>Student Assistants</h2>
+  <div class="card-grid">
+  <article class="content-card">
+    <p><strong>Junior Assistant Coach, Division B</strong></p>
+    <p>Joshie Cheng</p>
+  </article>
+  <article class="content-card">
+    <p><strong>Junior Assistant Coach, Division C</strong></p>
+    <p>John Chu</p>
+  </article>
+  <article class="content-card">
+    <p><strong>Team Mentor, Division B</strong></p>
+    <p>John Chu</p>
+  </article>
+  <article class="content-card">
+    <p><strong>Technology Coordinator</strong></p>
+    <p>Joshie Cheng</p>
+  </article>
+  </div>
+</div>
+
+<div class="page-section">
+  <h2>Board of Directors</h2>
+  <div class="card-grid">
+  <article class="content-card">
+    <p>Mrs Cheryl Booth</p>
+  </article>
+  <article class="content-card">
+    <p>Mrs Maria Kinsinger</p>
+  </article>
+
+  <article class="content-card">
+    <p>Mrs Theresa Chen</p>
+  </article>
+
+  <article class="content-card">
+    <p>Mrs Olivia Hsu-Cheng</p>
+  </article>
+
+  <article class="content-card">
+    <p>Mrs Betty Simon-Ogan</p>
+  </article>
+  </div>
+</div>

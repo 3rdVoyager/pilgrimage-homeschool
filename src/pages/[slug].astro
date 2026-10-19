@@ -1,7 +1,6 @@
 ---
-import { getCollection, getEntry } from "astro:content";
+import { getCollection, getEntry, render } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import PageSections from "../components/PageSections.astro";
 
 export async function getStaticPaths() {
   const pages = await getCollection("pages");
@@ -13,13 +12,17 @@ export async function getStaticPaths() {
 
 const slug = Astro.params.slug ?? "";
 
-const page = (await getEntry("pages", slug))?.data;
+const page = await getEntry("pages", slug);
 
 if (!page) {
   return new Response("Not Found", { status: 404 });
 }
+
+const { Content } = await render(page);
 ---
 
-<BaseLayout title={page.title} description={page.description}>
-  <PageSections page={page} />
+<BaseLayout title={page.data.title} description={page.data.description}>
+  <article class="page-content">
+    <Content />
+  </article>
 </BaseLayout>

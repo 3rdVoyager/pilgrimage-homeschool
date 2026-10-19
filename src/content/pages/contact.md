@@ -1,19 +1,14 @@
 ---
 title: Contact | Pilgrimage Homeschool
 description: Contact the Pilgrimage Homeschool Science Olympiad team.
-sections:
-  - layout: vertical
-    id: contact-us
-    color: blue
-    content: |
-      # Contact Us
-      
-      Have a question about Pilgrimage Homeschool Science Olympiad? We would be happy to hear from you.
-  - layout: vertical
-    id: email
-    color: white
-    content: |
-      ## Email
-      
-      To contact Head Coach Cheryl Booth, email us at **pilgrimagehomeschool@gmail.com**.
 ---
+
+<div class="page-section">
+  <h1>Contact Us</h1>
+  <p>Have a question about Pilgrimage Homeschool Science Olympiad? We would be happy to hear from you.</p>
+</div>
+
+<div class="page-section">
+  <h2>Email</h2>
+  <p>To contact Head Coach Cheryl Booth, email us at <strong>pilgrimagehomeschool@gmail.com</strong>.</p>
+</div>
