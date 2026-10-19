@@ -5,7 +5,6 @@ import "../styles/header.css";
 
 type Props = SiteSettings["header"];
 const { siteName, logoAlt, navItems } = Astro.props as Props;
-const currentPath = Astro.url.pathname;
 ---
 
 <header class="site-header">
@@ -19,27 +18,64 @@ const currentPath = Astro.url.pathname;
       <span>{siteName}</span>
     </a>
 
-    <ul>
-      {
-        navItems.map((item) => (
-          item.items?.length ? (
-            <DropdownMenu
-              label={item.label}
-              items={item.items}
-              currentPath={currentPath}
-            />
-          ) : (
-            <li>
-              <a
-                href={item.href}
-                class:list={["nav-link", currentPath === item.href && "active"]}
-              >
-                {item.label}
-              </a>
-            </li>
-          )
-        ))
-      }
-    </ul>
+    <details class="nav-menu">
+      <summary class="menu-toggle" aria-label="Toggle navigation">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </summary>
+      <ul>
+        {
+          navItems.map((item) => (
+            item.items?.length ? (
+              <DropdownMenu
+                label={item.label}
+                items={item.items}
+              />
+            ) : (
+              <li>
+                <a
+                  href={item.href}
+                  class="nav-link"
+                >
+                  {item.label}
+                </a>
+              </li>
+            )
+          ))
+        }
+      </ul>
+    </details>
   </nav>
 </header>
+
+<script>
+  const navMenu = document.querySelector<HTMLDetailsElement>(".nav-menu");
+  const mobileQuery = window.matchMedia("(max-width: 650px)");
+  let isClosing = false;
+
+  const syncNavMenu = () => {
+    if (navMenu) {
+      navMenu.open = !mobileQuery.matches;
+    }
+  };
+
+  navMenu?.addEventListener("toggle", () => {
+    if (!navMenu || isClosing || !mobileQuery.matches || navMenu.open) {
+      return;
+    }
+
+    isClosing = true;
+    navMenu.open = true;
+    navMenu.classList.add("is-closing");
+
+    window.setTimeout(() => {
+      navMenu.classList.remove("is-closing");
+      navMenu.open = false;
+      isClosing = false;
+    }, 250);
+  });
+
+  syncNavMenu();
+  mobileQuery.addEventListener("change", syncNavMenu);
+</script>

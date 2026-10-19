@@ -67,3 +67,9 @@
     height: auto;
     max-width: 100%;
 }
+
+@media (max-width: 600px) {
+    .page-content > * {
+        padding: 2.5rem 1.25rem;
+    }
+}

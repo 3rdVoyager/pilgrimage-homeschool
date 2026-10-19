@@ -1,21 +1,20 @@
 ---
 type MenuItem = { label: string; href: string };
 
-const { label, items, currentPath } = Astro.props;
+const { label, items } = Astro.props;
 const menuItems: MenuItem[] = items;
-const isActive = menuItems.some((item: MenuItem) => currentPath === item.href);
 ---
 
 <li class="nav-dropdown">
   <details>
-    <summary class:list={["nav-link", isActive && "active"]}>{label}</summary>
+    <summary class="nav-link">{label}</summary>
     <ul class="dropdown-menu">
       {
         menuItems.map((item: MenuItem) => (
           <li>
             <a
               href={item.href}
-              class:list={["nav-link", currentPath === item.href && "active"]}
+              class="nav-link"
             >
               {item.label}
             </a>

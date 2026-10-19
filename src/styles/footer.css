@@ -88,10 +88,17 @@
 
 @media (max-width: 650px) {
     .footer-inner {
+        gap: 2rem;
         grid-template-columns: 1fr;
     }
 
     .footer-columns {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 430px) {
+    .footer-columns {
+        grid-template-columns: 1fr;
     }
 }
