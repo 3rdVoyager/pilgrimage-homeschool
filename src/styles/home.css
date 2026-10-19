@@ -51,13 +51,21 @@
     }
 
     .home-hero-text {
-        top: 1rem;
-        left: 1rem;
-        right: 1rem;
-        padding: 1rem;
+        bottom: 0;
+        left: 0;
+        padding: 1.5rem 1rem 1.25rem;
+        right: 0;
+        background: rgb(0 0 0 / 70%);
+        top: auto;
+        z-index: 2;
     }
 
     .home-hero h1 {
-        font-size: clamp(2rem, 10vw, 3rem);
+        font-size: clamp(1.8rem, 9vw, 2.75rem);
+        line-height: 1.05;
+    }
+
+    .home-hero-text p {
+        font-size: 1rem;
     }
 }
