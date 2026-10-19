@@ -149,17 +149,42 @@
 
 
 @media (max-width: 650px) {
+    .site-header {
+        padding: 0.65rem 0.75rem;
+    }
+
     .site-header nav {
         align-items: stretch;
         flex-direction: column;
+        gap: 0.5rem;
+        max-width: 100%;
     }
 
     .site-header>nav>ul {
+        column-gap: 0.25rem;
         justify-content: center;
+        row-gap: 0.25rem;
         flex-wrap: wrap;
     }
 
+    .site-header>nav>a>span {
+        font-size: 1.2rem;
+    }
+
+    .site-header .brand-logo {
+        height: 2.25rem;
+        width: 2.25rem;
+    }
+
+    .site-header .nav-link {
+        font-size: 0.9rem;
+        min-height: 2.75rem;
+        padding: 0.65rem 0.5rem;
+    }
+
     .dropdown-menu {
-        position: static;
+        left: auto;
+        position: absolute;
+        right: 0;
     }
 }
