@@ -25,6 +25,12 @@ const siteSchema = z.object({
           .optional(),
       }),
     ),
+    ctas: z.array(
+      z.object({
+        label: z.string(),
+        href: z.string(),
+      }),
+    ),
   }),
   footer: z.object({
     description: z.string(),
