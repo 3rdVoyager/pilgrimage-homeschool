@@ -47,6 +47,11 @@ h3 {
     font-size: clamp(1.25rem, 3vw, 2rem);
 }
 
+h4 {
+    color: var(--color-burgundy);
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
+}
+
 strong {
     font-weight: 700;
 }
