@@ -24,6 +24,14 @@
     padding-top: 5rem;
 }
 
+.page-content * + * {
+    margin-top: 1.5rem;
+}
+
+.page-content li + li {
+    margin-top: 0.5rem;
+}
+
 .page-section {
     border-top: 2px solid var(--color-border);
 }
@@ -38,18 +46,31 @@
 }
 
 .page-content a {
+    color: var(--color-burgundy);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.page-content a:hover {
+    color: var(--color-burgundy-dark);
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+}
+
+.page-content a.button-link {
     background-color: var(--color-burgundy);
     border-radius: 6px;
     color: var(--color-text-light);
     display: inline-block;
-    font-weight: 600;
     padding: 0.5rem 1rem;
     text-decoration: none;
     transition: background-color 0.15s ease, color 0.15s ease;
 }
 
-.page-content a:hover {
+.page-content a.button-link:hover {
     background-color: var(--color-burgundy-dark);
+    text-decoration: none;
 }
 
 .page-content a:focus-visible {

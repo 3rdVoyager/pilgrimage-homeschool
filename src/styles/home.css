@@ -6,7 +6,7 @@
     isolation: isolate;
     overflow: hidden;
     position: relative;
-    min-height: clamp(30rem, 75vh, 42rem);
+    min-height: 120vh;
 }
 
 .home-hero .home-hero-image {

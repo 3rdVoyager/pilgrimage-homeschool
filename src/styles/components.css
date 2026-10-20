@@ -5,6 +5,10 @@
     margin: 2rem 0;
 }
 
+.page-content .card-grid > * {
+    margin-top: 0;
+}
+
 .content-card {
     background-color: var(--color-card-bg);
     border: 1px solid var(--color-border);
