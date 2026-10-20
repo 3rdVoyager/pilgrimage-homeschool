@@ -12,8 +12,9 @@ header:
       href: /staff/
   - label: Resources
     href: /resources/
-  - label: Contact
+  - label: Contact Us
     href: /contact/
+  ctas:
   - label: Join the Team
     href: /join/
 footer:

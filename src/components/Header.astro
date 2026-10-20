@@ -5,6 +5,7 @@ import "../styles/header.css";
 
 type Props = SiteSettings["header"];
 const { siteName, logoAlt, navItems } = Astro.props as Props;
+const { ctas } = Astro.props as Props;
 ---
 
 <header class="site-header">
@@ -44,6 +45,15 @@ const { siteName, logoAlt, navItems } = Astro.props as Props;
             )
           ))
         }
+        <li class="header-ctas">
+          {
+            ctas.map((cta) => (
+              <a href={cta.href} class="nav-link cta-link">
+                {cta.label}
+              </a>
+            ))
+          }
+        </li>
       </ul>
     </details>
   </nav>

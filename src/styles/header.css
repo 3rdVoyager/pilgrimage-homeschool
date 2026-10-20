@@ -77,7 +77,7 @@
     transition: color 0.2s ease;
 }
 
-.site-header .nav-link::after {
+.site-header > nav > .nav-menu > ul > li > a.nav-link:not(.cta-link)::after {
     background-color: var(--color-gold);
     bottom: 0.25rem;
     content: "";
@@ -94,8 +94,27 @@
     color: var(--color-gold-light);
 }
 
-.site-header .nav-link:hover::after {
+.site-header > nav > .nav-menu > ul > li > a.nav-link:not(.cta-link):hover::after {
     transform: scaleX(1);
+}
+
+.header-ctas {
+    align-items: center;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.header-ctas .cta-link {
+    background-color: var(--color-burgundy);
+    border-radius: 0.35rem;
+    color: var(--color-text-light);
+    padding: 0.5rem 0.75rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.header-ctas .cta-link:hover {
+    background-color: var(--color-burgundy-dark);
+    color: var(--color-gold-light);
 }
 
 .nav-dropdown summary {
@@ -104,6 +123,22 @@
     font: inherit;
     line-height: inherit;
     list-style: none;
+}
+
+.nav-dropdown summary::after {
+    border-bottom: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    content: "";
+    display: inline-block;
+    height: 0.45rem;
+    margin-left: 0.55rem;
+    transform: translateY(-0.15rem) rotate(45deg);
+    transition: transform 0.2s ease;
+    width: 0.45rem;
+}
+
+.nav-dropdown details[open] > summary::after {
+    transform: translateY(0.1rem) rotate(225deg);
 }
 
 .nav-dropdown summary::-webkit-details-marker {
@@ -118,9 +153,10 @@
     gap: 0.25rem;
     left: 0;
     list-style: none;
-    min-width: 10rem;
+    box-shadow: 0 0.75rem 1.5rem rgb(0 0 0 / 18%);
+    min-width: 11rem;
     opacity: 0;
-    padding: 0.5rem;
+    padding: 0.4rem;
     position: absolute;
     top: calc(100% + 0.35rem);
     transform: translateY(-0.25rem);
@@ -142,8 +178,9 @@
 .dropdown-menu .nav-link {
     display: flex;
     border-radius: 0.35rem;
+    font-size: 0.95rem;
     min-height: auto;
-    padding: 0.55rem 0.75rem;
+    padding: 0.65rem 0.8rem;
     position: relative;
     text-align: left;
     width: 100%;
@@ -154,8 +191,12 @@
 }
 
 .dropdown-menu .nav-link:hover {
-    background-color: var(--color-burgundy);
+    background-color: rgb(255 255 255 / 10%);
     color: var(--color-gold-light);
+}
+
+.dropdown-menu > li + li {
+    border-top: 1px solid rgb(255 255 255 / 12%);
 }
 
 .site-header>nav>a {
@@ -310,6 +351,16 @@
 
     .nav-menu > ul > li {
         display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .header-ctas {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .header-ctas .cta-link {
         justify-content: center;
         width: 100%;
     }
